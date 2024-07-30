@@ -1,50 +1,162 @@
 [
   {
-    "_id": {
-      "$oid": "66a0e12766e680aa875eb895"
-    },
-    "username": "sue",
-    "email": "sue@sue",
-    "password": "$2b$10$GJFpLmSPbO2oZGYleKOnE.WIbAOLYBylIMlUbDJZQ2PpnaVbQzs1u",
-    "uuid": "4264e0b8-c868-4855-8ce2-e6458a743edf",
-    "last_updated": {
-      "$date": "2024-07-24T11:10:40.907Z"
-    }
+    "id": 1,
+    "username": "jdoe123",
+    "password": "P@ssw0rd123!",
+    "email": "jdoe123@example.com",
+    "uuid": "d5f69b84-8377-4a8a-9d28-1a52c73cf54b",
+    "created_at": "NOW()"
   },
   {
-    "_id": {
-      "$oid": "66a0e9a7a425545d6983ba4e"
-    },
-    "username": "bob",
-    "email": "bob@bob",
-    "password": "$2b$10$1p5cIcz1xaPJZltntl3EEun9gGIf7CMhGVAeVZnKz5XP/QFN30vvK",
-    "uuid": "774c6b61-2560-4f60-b45c-5cd417f34874",
-    "last_updated": {
-      "$date": "2024-07-24T11:46:57.184Z"
-    }
+    "id": 2,
+    "username": "asmith45",
+    "password": "SecureP@ss4!7",
+    "email": "asmith45@example.com",
+    "uuid": "f14f8550-0b1f-4d09-8d4b-38de676bd7a4",
+    "created_at": "NOW()"
   },
   {
-    "_id": {
-      "$oid": "66a0ef0ba425545d6983ba4f"
-    },
-    "username": "greg",
-    "email": "greg@greg",
-    "password": "$2b$10$t9XTuTxDzTji2Kp8zeHGB.hFsjM.z5bL7htBSnYeSsJ64cItyIffm",
-    "uuid": "e438603c-7744-4608-ace9-11e509cf927a",
-    "last_updated": {
-      "$date": "2024-07-24T12:10:00.453Z"
-    }
+    "id": 3,
+    "username": "mbrown87",
+    "password": "B3tterP@ssw0rd",
+    "email": "mbrown87@example.com",
+    "uuid": "c6c38215-fb0a-45d0-9303-d63c830fbbf3",
+    "created_at": "NOW()"
   },
   {
-    "_id": {
-      "$oid": "66a0f109a425545d6983ba50"
-    },
-    "username": "bobby",
-    "email": "bobby@bobby",
-    "password": "$2b$10$6oi6MFtHMRgYpoRwuHZ2SeIDd1AhLqJu990ZzFzl.jcwdtlD0VW7.",
-    "uuid": "9af42c6f-5a92-4352-be39-7f1e45107b85",
-    "last_updated": {
-      "$date": "2024-07-24T12:18:27.426Z"
-    }
+    "id": 4,
+    "username": "ejones22",
+    "password": "Pa$w0rd2024",
+    "email": "ejones22@example.com",
+    "uuid": "f7d8e0c4-f4c1-41f3-8d1b-d04e7e3889a1",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 5,
+    "username": "clark.k",
+    "password": "Myp@ssw0rd!",
+    "email": "clark.k@example.com",
+    "uuid": "53cbac9f-4bbd-49b1-92c4-ef5fdc74a760",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 6,
+    "username": "rharris",
+    "password": "Str0ngP@ss!",
+    "email": "rharris@example.com",
+    "uuid": "1fd21b73-25b3-4e0e-9b1e-1fd6b9f2d1a3",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 7,
+    "username": "jlee",
+    "password": "P@ssw0rd2023$",
+    "email": "jlee@example.com",
+    "uuid": "8bde7a5d-7f43-4d0a-8506-8a582b5c25d7",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 8,
+    "username": "kturner",
+    "password": "S3cur3P@ss!",
+    "email": "kturner@example.com",
+    "uuid": "5c9f36e4-9799-42fc-b501-d68dbd090a5b",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 9,
+    "username": "mwalker",
+    "password": "P@ssw0rd*2024",
+    "email": "mwalker@example.com",
+    "uuid": "a6188b74-749f-4c9b-bc28-00b235026d04",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 10,
+    "username": "bwhite",
+    "password": "MyP@ss2023!",
+    "email": "bwhite@example.com",
+    "uuid": "05e5a3ae-072f-4a92-b3d0-d3b2f057ff3e",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 11,
+    "username": "nmoore",
+    "password": "SecurePass@123",
+    "email": "nmoore@example.com",
+    "uuid": "1c736bda-6c27-451c-9894-565d8dc7c0d5",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 12,
+    "username": "dfoster",
+    "password": "NewP@ssw0rd!",
+    "email": "dfoster@example.com",
+    "uuid": "8e3f58d4-c67c-485a-8eae-5d44b603ff54",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 13,
+    "username": "jmartin",
+    "password": "P@ssW0rd!2024",
+    "email": "jmartin@example.com",
+    "uuid": "a2f54b3c-7247-41d1-846b-5e249c8d30bb",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 14,
+    "username": "lthompson",
+    "password": "Myp@ss2024$",
+    "email": "lthompson@example.com",
+    "uuid": "c8b762e0-e4ab-496a-b1b6-14b1b835d1b1",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 15,
+    "username": "gwright",
+    "password": "Str0ngP@ss!",
+    "email": "gwright@example.com",
+    "uuid": "12d77b89-5b3e-48b5-9e35-77f80b8700a4",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 16,
+    "username": "schavez",
+    "password": "P@ssword$2024",
+    "email": "schavez@example.com",
+    "uuid": "c81a8454-6e3c-47db-97ef-8cfe9342b6b7",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 17,
+    "username": "rjones",
+    "password": "P@ssw0rd2024!",
+    "email": "rjones@example.com",
+    "uuid": "39ed9b2e-66e1-4523-b79a-2f2e700e7a5e",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 18,
+    "username": "cbrown",
+    "password": "Secur3P@ss!",
+    "email": "cbrown@example.com",
+    "uuid": "fb9b8423-0d0e-4eb5-85fd-9b1fd2e6a4a4",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 19,
+    "username": "pallen",
+    "password": "Passw0rd!2023",
+    "email": "pallen@example.com",
+    "uuid": "f84d6b0c-16c2-478d-9d0e-32b59ab15e4a",
+    "created_at": "NOW()"
+  },
+  {
+    "id": 20,
+    "username": "tkelly",
+    "password": "Myp@ss2024$",
+    "email": "tkelly@example.com",
+    "uuid": "6e9825fc-95b5-42ae-9629-e743b6897ed2",
+    "created_at": "NOW()"
   }
 ]

@@ -1,0 +1,920 @@
+[
+  {
+    "id": 1,
+    "title": "Back in Black",
+    "artist": "AC/DC",
+    "genre": "Rock",
+    "year": 1980,
+    "label": "Atlantic",
+    "description": "AC/DC: 1980 album, known for its electrifying rock sound and one of the best-selling albums of all time."
+  },
+  {
+    "id": 2,
+    "title": "The Dark Side of the Moon",
+    "artist": "Pink Floyd",
+    "genre": "Progressive Rock",
+    "year": 1973,
+    "label": "Harvest",
+    "description": "A concept album exploring the human experience with revolutionary sound and thematic depth."
+  },
+  {
+    "id": 3,
+    "title": "Thriller",
+    "artist": "Michael Jackson",
+    "genre": "Pop",
+    "year": 1982,
+    "label": "Epic",
+    "description": "Michael Jackson: 1982 record, a global phenomenon known for its innovative music videos and chart-topping hits."
+  },
+  {
+    "id": 4,
+    "title": "The Beatles",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1968,
+    "label": "Apple",
+    "description": "The Beatles: double album, often called the \"White Album,\" showcasing their eclectic range of styles."
+  },
+  {
+    "id": 5,
+    "title": "Rumours",
+    "artist": "Fleetwood Mac",
+    "genre": "Rock",
+    "year": 1977,
+    "label": "Warner Bros.",
+    "description": "Fleetwood Mac: 1977 album, renowned for its emotional depth and classic rock anthems."
+  },
+  {
+    "id": 6,
+    "title": "Nevermind",
+    "artist": "Nirvana",
+    "genre": "Grunge",
+    "year": 1991,
+    "label": "DGC",
+    "description": "Nirvana 1991 breakthrough album that defined the grunge movement with its raw sound and poignant lyrics."
+  },
+  {
+    "id": 7,
+    "title": "Born to Run",
+    "artist": "Bruce Springsteen",
+    "genre": "Rock",
+    "year": 1975,
+    "label": "Columbia",
+    "description": "Springsteen: 1975 album, a landmark rock record with its epic storytelling and anthemic sound."
+  },
+  {
+    "id": 8,
+    "title": "Hotel California",
+    "artist": "Eagles",
+    "genre": "Rock",
+    "year": 1976,
+    "label": "Asylum",
+    "description": "The Eagles: 1976 album, famous for its lush production and the iconic title track."
+  },
+  {
+    "id": 9,
+    "title": "The Joshua Tree",
+    "artist": "U2",
+    "genre": "Rock",
+    "year": 1987,
+    "label": "Island",
+    "description": "U2s: 1987 album, blending rock with spiritual and political themes to create a timeless classic."
+  },
+  {
+    "id": 10,
+    "title": "Abbey Road",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1969,
+    "label": "Apple",
+    "description": "The Beatles: 1969 album, known for its innovative recording techniques and the iconic medley on Side B."
+  },
+  {
+    "id": 11,
+    "title": "Led Zeppelin IV",
+    "artist": "Led Zeppelin",
+    "genre": "Rock",
+    "year": 1971,
+    "label": "Atlantic",
+    "description": "A classic rock staple featuring \"Stairway to Heaven\" and a range of hard rock and acoustic tracks."
+  },
+  {
+    "id": 12,
+    "title": "A Night at the Opera",
+    "artist": "Queen",
+    "genre": "Rock",
+    "year": 1975,
+    "label": "EMI",
+    "description": "Queen 1975 album, famous for its operatic rock and the legendary \"Bohemian Rhapsody.\""
+  },
+  {
+    "id": 13,
+    "title": "Kind of Blue",
+    "artist": "Miles Davis",
+    "genre": "Jazz",
+    "year": 1959,
+    "label": "Columbia",
+    "description": "Miles Davis: 1959 album, a cornerstone of jazz featuring a groundbreaking modal approach."
+  },
+  {
+    "id": 14,
+    "title": "In the Court of the Crimson King",
+    "artist": "King Crimson",
+    "genre": "Progressive Rock",
+    "year": 1969,
+    "label": "Island",
+    "description": "A landmark album in progressive rock with its complex structures and dark, atmospheric sound."
+  },
+  {
+    "id": 15,
+    "title": "Pet Sounds",
+    "artist": "The Beach Boys",
+    "genre": "Pop",
+    "year": 1966,
+    "label": "Capitol",
+    "description": "The Beach Boys: 1966 album, renowned for its sophisticated production and harmonically rich sound."
+  },
+  {
+    "id": 16,
+    "title": "To Pimp a Butterfly",
+    "artist": "Kendrick Lamar",
+    "genre": "Hip Hop",
+    "year": 2015,
+    "label": "Top Dawg",
+    "description": "Kendrick Lamar: 2015 album, a powerful exploration of race and identity with a diverse musical landscape."
+  },
+  {
+    "id": 17,
+    "title": "Blonde on Blonde",
+    "artist": "Bob Dylan",
+    "genre": "Folk Rock",
+    "year": 1966,
+    "label": "Columbia",
+    "description": "Bob Dylan: 1966 album, known for its complex lyrics and fusion of rock and folk influences."
+  },
+  {
+    "id": 18,
+    "title": "Born in the U.S.A.",
+    "artist": "Bruce Springsteen",
+    "genre": "Rock",
+    "year": 1984,
+    "label": "Columbia",
+    "description": "Springsteen: 1984 album, featuring anthems that explore American life and its struggles."
+  },
+  {
+    "id": 19,
+    "title": "The Suburbs",
+    "artist": "Arcade Fire",
+    "genre": "Indie Rock",
+    "year": 2010,
+    "label": "Merge",
+    "description": "Arcade Fire: 2010 album, acclaimed for its reflection on suburban life and its expansive, anthemic sound."
+  },
+  {
+    "id": 20,
+    "title": "Dark Side of the Moon",
+    "artist": "Pink Floyd",
+    "genre": "Progressive Rock",
+    "year": 1973,
+    "label": "Harvest",
+    "description": "Pink Floyd: iconic 1973 concept album, celebrated for its sonic innovation and thematic coherence."
+  },
+  {
+    "id": 21,
+    "title": "Goodbye Yellow Brick Road",
+    "artist": "Elton John",
+    "genre": "Pop",
+    "year": 1973,
+    "label": "MCA",
+    "description": "Elton John: 1973 double album, featuring a mix of pop hits and intricate compositions."
+  },
+  {
+    "id": 22,
+    "title": "The Wall",
+    "artist": "Pink Floyd",
+    "genre": "Progressive Rock",
+    "year": 1979,
+    "label": "Columbia",
+    "description": "Pink Floyd: 1979 rock opera, a profound exploration of isolation and mental anguish."
+  },
+  {
+    "id": 23,
+    "title": "The Bends",
+    "artist": "Radiohead",
+    "genre": "Alternative Rock",
+    "year": 1995,
+    "label": "Parlophone",
+    "description": "Radiohead: 1995 album, known for its emotive lyrics and innovative guitar work."
+  },
+  {
+    "id": 24,
+    "title": "Lust for Life",
+    "artist": "Iggy Pop",
+    "genre": "Rock",
+    "year": 1977,
+    "label": "Arista",
+    "description": "Iggy Pop: 1977 album, featuring a raw rock sound and energetic performances."
+  },
+  {
+    "id": 25,
+    "title": "Odessey and Oracle",
+    "artist": "The Zombies",
+    "genre": "Pop",
+    "year": 1968,
+    "label": "Date",
+    "description": "A psychedelic pop masterpiece with lush arrangements and enduring melodies."
+  },
+  {
+    "id": 26,
+    "title": "Genius of Modern Music",
+    "artist": "Thelonious Monk",
+    "genre": "Jazz",
+    "year": 1956,
+    "label": "Blue Note",
+    "description": "Monk: groundbreaking 1956 album, showcasing his unique compositions and improvisational style."
+  },
+  {
+    "id": 27,
+    "title": "A Love Supreme",
+    "artist": "John Coltrane",
+    "genre": "Jazz",
+    "year": 1965,
+    "label": "Impulse!",
+    "description": "John Coltrane: spiritual jazz suite, revered for its profound impact and innovative approach."
+  },
+  {
+    "id": 28,
+    "title": "Are You Experienced?",
+    "artist": "The Jimi Hendrix Experience",
+    "genre": "Rock",
+    "year": 1967,
+    "label": "Reprise",
+    "description": "Jimi Hendrix: groundbreaking debut, known for its innovative guitar work and psychedelic sound."
+  },
+  {
+    "id": 29,
+    "title": "Songs in the Key of Life",
+    "artist": "Stevie Wonder",
+    "genre": "Soul",
+    "year": 1976,
+    "label": "Tamla",
+    "description": "Stevie Wonder: 1976 double album, celebrated for its rich arrangements and lyrical depth."
+  },
+  {
+    "id": 30,
+    "title": "Electric Ladyland",
+    "artist": "The Jimi Hendrix Experience",
+    "genre": "Rock",
+    "year": 1968,
+    "label": "Reprise",
+    "description": "Jimi Hendrix: 1968 album, known for its experimental approach and psychedelic sound."
+  },
+  {
+    "id": 31,
+    "title": "Exile on Main St.",
+    "artist": "The Rolling Stones",
+    "genre": "Rock",
+    "year": 1972,
+    "label": "Rolling Stones",
+    "description": "The Rolling Stones: gritty 1972 album, known for its diverse styles and raw energy."
+  },
+  {
+    "id": 32,
+    "title": "Back to Black",
+    "artist": "Amy Winehouse",
+    "genre": "Soul",
+    "year": 2006,
+    "label": "Island",
+    "description": "Amy Winehouse: 2006 album, celebrated for its deep, soulful sound and confessional lyrics."
+  },
+  {
+    "id": 33,
+    "title": "The Queen Is Dead",
+    "artist": "The Smiths",
+    "genre": "Alternative Rock",
+    "year": 1986,
+    "label": "Rough Trade",
+    "description": "The Smiths: 1986 album, known for its introspective lyrics and influential sound."
+  },
+  {
+    "id": 34,
+    "title": "A Night at the Opera",
+    "artist": "Queen",
+    "genre": "Rock",
+    "year": 1975,
+    "label": "EMI",
+    "description": "Queen: 1975 album, known for its elaborate production and operatic rock songs."
+  },
+  {
+    "id": 35,
+    "title": "Tusk",
+    "artist": "Fleetwood Mac",
+    "genre": "Rock",
+    "year": 1979,
+    "label": "Warner Bros.",
+    "description": "Fleetwood Mac: ambitious 1979 double album, recognized for its experimental sound and diverse tracks."
+  },
+  {
+    "id": 36,
+    "title": "The Low End Theory",
+    "artist": "A Tribe Called Quest",
+    "genre": "Hip Hop",
+    "year": 1991,
+    "label": "Jive",
+    "description": "A Tribe Called Quest: 1991 album, influential in shaping the sound of hip-hop with its jazzy beats and insightful lyrics."
+  },
+  {
+    "id": 37,
+    "title": "Blue Lines",
+    "artist": "Massive Attack",
+    "genre": "Trip Hop",
+    "year": 1991,
+    "label": "Virgin",
+    "description": "Massive Attack: 1991 debut, pioneering the trip-hop genre with its atmospheric and moody sound."
+  },
+  {
+    "id": 38,
+    "title": "Blonde on Blonde",
+    "artist": "Bob Dylan",
+    "genre": "Folk Rock",
+    "year": 1966,
+    "label": "Columbia",
+    "description": "Dylan: 1966 double album, a landmark in rock with its poetic lyrics and diverse sound."
+  },
+  {
+    "id": 39,
+    "title": "Houses of the Holy",
+    "artist": "Led Zeppelin",
+    "genre": "Rock",
+    "year": 1973,
+    "label": "Atlantic",
+    "description": "Led Zeppelin: 1973 album, showcasing a mix of hard rock and experimental sounds."
+  },
+  {
+    "id": 40,
+    "title": "In Utero",
+    "artist": "Nirvana",
+    "genre": "Grunge",
+    "year": 1993,
+    "label": "DGC",
+    "description": "Nirvana: 1993 follow-up to \"Nevermind,\" known for its raw sound and darker themes."
+  },
+  {
+    "id": 41,
+    "title": "The Piper at the Gates of Dawn",
+    "artist": "Pink Floyd",
+    "genre": "Psychedelic Rock",
+    "year": 1967,
+    "label": "Columbia",
+    "description": "Pink Floyd: 1967 debut, a seminal work in psychedelic rock with its experimental sounds."
+  },
+  {
+    "id": 42,
+    "title": "The Essential Bob Dylan",
+    "artist": "Bob Dylan",
+    "genre": "Folk Rock",
+    "year": 2000,
+    "label": "Columbia",
+    "description": "A compilation of Bob Dylan: most impactful tracks, highlighting his influence on rock and folk music."
+  },
+  {
+    "id": 43,
+    "title": "Greatest Hits",
+    "artist": "ABBA",
+    "genre": "Pop",
+    "year": 1975,
+    "label": "Epic",
+    "description": "ABBA: compilation album, featuring their most memorable hits and pop classics."
+  },
+  {
+    "id": 44,
+    "title": "Hymns to the Silence",
+    "artist": "Van Morrison",
+    "genre": "Rock",
+    "year": 1991,
+    "label": "Mercury",
+    "description": "Van Morrison: 1991 release, known for its introspective lyrics and soulful melodies."
+  },
+  {
+    "id": 45,
+    "title": "Paranoid",
+    "artist": "Black Sabbath",
+    "genre": "Heavy Metal",
+    "year": 1970,
+    "label": "Vertigo",
+    "description": "Black Sabbath: 1970 album, a milestone in heavy metal with its dark, powerful riffs."
+  },
+  {
+    "id": 46,
+    "title": "Born to Run",
+    "artist": "Bruce Springsteen",
+    "genre": "Rock",
+    "year": 1975,
+    "label": "Columbia",
+    "description": "A seminal rock album by Bruce Springsteen, celebrated for its epic sound and lyrical storytelling."
+  },
+  {
+    "id": 47,
+    "title": "The Very Best of The Kinks",
+    "artist": "The Kinks",
+    "genre": "Rock",
+    "year": 1998,
+    "label": "Castle",
+    "description": "A compilation of The Kinks: greatest hits, highlighting their unique sound and influence."
+  },
+  {
+    "id": 48,
+    "title": "American Recordings",
+    "artist": "Johnny Cash",
+    "genre": "Country",
+    "year": 1994,
+    "label": "American",
+    "description": "Johnny Cash: 1994 album, noted for its stripped-down production and emotional resonance."
+  },
+  {
+    "id": 49,
+    "title": "Goodbye Yellow Brick Road",
+    "artist": "Elton John",
+    "genre": "Pop",
+    "year": 1973,
+    "label": "MCA",
+    "description": "Elton John: 1973 album, showcasing his range of pop and rock styles with memorable tracks."
+  },
+  {
+    "id": 50,
+    "title": "Who’s Next",
+    "artist": "The Who",
+    "genre": "Rock",
+    "year": 1971,
+    "label": "Decca",
+    "description": "The Who: 1971 album, known for its innovative use of synthesizers and powerful rock sound."
+  },
+  {
+    "id": 51,
+    "title": "Tales of Mystery and Imagination",
+    "artist": "Alan Parsons Project",
+    "genre": "Progressive Rock",
+    "year": 1976,
+    "label": "Arista",
+    "description": "Alan Parsons Project: 1976 debut, a concept album inspired by Edgar Allan Poes works."
+  },
+  {
+    "id": 52,
+    "title": "Live at Leeds",
+    "artist": "The Who",
+    "genre": "Rock",
+    "year": 1970,
+    "label": "Track",
+    "description": "The Who: 1970 live album, celebrated for its raw energy and electrifying performances."
+  },
+  {
+    "id": 53,
+    "title": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+    "artist": "David Bowie",
+    "genre": "Rock",
+    "year": 1972,
+    "label": "RCA",
+    "description": "David Bowie: 1972 concept album, featuring his iconic Ziggy Stardust persona and innovative rock sound."
+  },
+  {
+    "id": 54,
+    "title": "Songs of Leonard Cohen",
+    "artist": "Leonard Cohen",
+    "genre": "Folk",
+    "year": 1967,
+    "label": "Columbia",
+    "description": "Leonard Cohen: 1967 debut, known for its profound lyrics and Cohen's deep, resonant voice."
+  },
+  {
+    "id": 55,
+    "title": "The Band",
+    "artist": "The Band",
+    "genre": "Rock",
+    "year": 1969,
+    "label": "Capitol",
+    "description": "The Band: self-titled 1969 album, blending rock with Americana influences."
+  },
+  {
+    "id": 56,
+    "title": "Are You Experienced?",
+    "artist": "The Jimi Hendrix Experience",
+    "genre": "Rock",
+    "year": 1967,
+    "label": "Reprise",
+    "description": "Jimi Hendrix: 1967 debut, showcasing his groundbreaking guitar techniques and psychedelic sound."
+  },
+  {
+    "id": 57,
+    "title": "Greatest Hits",
+    "artist": "Elton John",
+    "genre": "Pop",
+    "year": 1974,
+    "label": "MCA",
+    "description": "A collection of Elton John's most popular songs from the early 1970s, displaying his pop brilliance."
+  },
+  {
+    "id": 58,
+    "title": "White Album",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1968,
+    "label": "Apple",
+    "description": "The Beatles: 1968 double album, known for its eclectic mix of styles and experimental approach."
+  },
+  {
+    "id": 59,
+    "title": "The Essential Johnny Cash",
+    "artist": "Johnny Cash",
+    "genre": "Country",
+    "year": 2002,
+    "label": "Columbia",
+    "description": "A compilation of Johnny Cash's most influential tracks, highlighting his powerful storytelling."
+  },
+  {
+    "id": 60,
+    "title": "Never Mind the Bollocks, Here’s the Sex Pistols",
+    "artist": "Sex Pistols",
+    "genre": "Punk Rock",
+    "year": 1977,
+    "label": "Virgin",
+    "description": "The Sex Pistols: 1977 debut, a cornerstone of punk rock with its raw sound and rebellious attitude."
+  },
+  {
+    "id": 61,
+    "title": "Electric Warrior",
+    "artist": "T. Rex",
+    "genre": "Glam Rock",
+    "year": 1971,
+    "label": "T. Rex",
+    "description": "T. Rex: 1971 album, a defining release in glam rock with catchy melodies and flamboyant style."
+  },
+  {
+    "id": 62,
+    "title": "Songs in the Key of Life",
+    "artist": "Stevie Wonder",
+    "genre": "Soul",
+    "year": 1976,
+    "label": "Tamla",
+    "description": "Stevie Wonder: 1976 double album, acclaimed for its rich musicality and lyrical depth."
+  },
+  {
+    "id": 63,
+    "title": "Rumours",
+    "artist": "Fleetwood Mac",
+    "genre": "Rock",
+    "year": 1977,
+    "label": "Warner Bros.",
+    "description": "Fleetwood Mac: 1977 album, a rock classic known for its emotional and musical complexity."
+  },
+  {
+    "id": 64,
+    "title": "The Very Best of The Kinks",
+    "artist": "The Kinks",
+    "genre": "Rock",
+    "year": 1998,
+    "label": "Castle",
+    "description": "A collection of The Kinks' greatest hits, reflecting their distinctive sound and influence."
+  },
+  {
+    "id": 65,
+    "title": "The Queen Is Dead",
+    "artist": "The Smiths",
+    "genre": "Alternative Rock",
+    "year": 1986,
+    "label": "Rough Trade",
+    "description": "The Smiths: 1986 album, known for its melancholic lyrics and influential alternative rock sound."
+  },
+  {
+    "id": 66,
+    "title": "Songs of Innocence",
+    "artist": "U2",
+    "genre": "Rock",
+    "year": 2014,
+    "label": "Island",
+    "description": "U2: 2014 album, exploring themes of innocence with a polished rock sound."
+  },
+  {
+    "id": 67,
+    "title": "Lonesome Dreams",
+    "artist": "Foy Vance",
+    "genre": "Country",
+    "year": 2014,
+    "label": "RCA",
+    "description": "Foy Vance: 2014 release, blending folk and country with heartfelt lyrics and melodies."
+  },
+  {
+    "id": 68,
+    "title": "Blonde on Blonde",
+    "artist": "Bob Dylan",
+    "genre": "Folk Rock",
+    "year": 1966,
+    "label": "Columbia",
+    "description": "Bob Dylan: 1966 album, an influential work in folk rock with its complex lyrics and innovative sound."
+  },
+  {
+    "id": 69,
+    "title": "The Essential Johnny Cash",
+    "artist": "Johnny Cash",
+    "genre": "Country",
+    "year": 2002,
+    "label": "Columbia",
+    "description": "A collection of Johnny Cash's most iconic tracks, showcasing his deep, resonant voice and storytelling."
+  },
+  {
+    "id": 70,
+    "title": "Back in Black",
+    "artist": "AC/DC",
+    "genre": "Rock",
+    "year": 1980,
+    "label": "Atlantic",
+    "description": "AC/DC: 1980 release, celebrated for its powerful riffs and enduring rock anthems."
+  },
+  {
+    "id": 71,
+    "title": "Legend",
+    "artist": "Bob Marley and the Wailers",
+    "genre": "Reggae",
+    "year": 1984,
+    "label": "Island",
+    "description": "A compilation of Bob Marley's greatest hits, highlighting his revolutionary reggae sound."
+  },
+  {
+    "id": 72,
+    "title": "Goodbye Yellow Brick Road",
+    "artist": "Elton John",
+    "genre": "Pop",
+    "year": 1973,
+    "label": "MCA",
+    "description": "Elton John: 1973 classic, featuring a mix of pop and rock with elaborate production."
+  },
+  {
+    "id": 73,
+    "title": "Songs of Innocence",
+    "artist": "U2",
+    "genre": "Rock",
+    "year": 2014,
+    "label": "Island",
+    "description": "U2: 2014 album, a polished rock exploration of youth and innocence."
+  },
+  {
+    "id": 74,
+    "title": "Tales of Mystery and Imagination",
+    "artist": "Alan Parsons Project",
+    "genre": "Progressive Rock",
+    "year": 1976,
+    "label": "Arista",
+    "description": "Alan Parsons Project: 1976 debut, a concept album based on Edgar Allan Poe."
+  },
+  {
+    "id": 75,
+    "title": "The Best of David Bowie",
+    "artist": "David Bowie",
+    "genre": "Rock",
+    "year": 1980,
+    "label": "RCA",
+    "description": "A compilation of David Bowie's most influential tracks, showcasing his innovative career."
+  },
+  {
+    "id": 76,
+    "title": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+    "artist": "David Bowie",
+    "genre": "Rock",
+    "year": 1972,
+    "label": "RCA",
+    "description": "David Bowie: 1972 concept album, featuring his iconic Ziggy Stardust persona."
+  },
+  {
+    "id": 77,
+    "title": "American Music Club",
+    "artist": "California",
+    "genre": "Alternative Rock",
+    "year": 1988,
+    "label": "Reprise",
+    "description": "American Music Club: 1988 album, praised for its introspective lyrics and alternative rock sound."
+  },
+  {
+    "id": 78,
+    "title": "Songs in the Key of Life",
+    "artist": "Stevie Wonder",
+    "genre": "Soul",
+    "year": 1976,
+    "label": "Tamla",
+    "description": "Stevie Wonder: 1976 double album, known for its rich musical arrangements and lyrical depth."
+  },
+  {
+    "id": 79,
+    "title": "The Clash",
+    "artist": "The Clash",
+    "genre": "Punk Rock",
+    "year": 1977,
+    "label": "CBS",
+    "description": "The Clash: 1977 debut, a seminal punk rock album with energetic tracks and political commentary."
+  },
+  {
+    "id": 80,
+    "title": "Electric Warrior",
+    "artist": "T. Rex",
+    "genre": "Glam Rock",
+    "year": 1971,
+    "label": "T. Rex",
+    "description": "T. Rex: 1971 album, known for its glam rock style and catchy, flamboyant songs."
+  },
+  {
+    "id": 81,
+    "title": "A Hard Day’s Night",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1964,
+    "label": "Parlophone",
+    "description": "The Beatles: 1964 album, featuring their early hits and a vibrant rock sound."
+  },
+  {
+    "id": 82,
+    "title": "Never Mind the Bollocks, Here’s the Sex Pistols",
+    "artist": "Sex Pistols",
+    "genre": "Punk Rock",
+    "year": 1977,
+    "label": "Virgin",
+    "description": "Sex Pistols: 1977 debut, a defining punk rock album with its raw energy and rebellious spirit."
+  },
+  {
+    "id": 83,
+    "title": "The Best of The Doors",
+    "artist": "The Doors",
+    "genre": "Rock",
+    "year": 1985,
+    "label": "Elektra",
+    "description": "A compilation of The Doors' greatest tracks, showcasing their distinctive rock sound."
+  },
+  {
+    "id": 84,
+    "title": "Back in Black",
+    "artist": "AC/DC",
+    "genre": "Rock",
+    "year": 1980,
+    "label": "Atlantic",
+    "description": "AC/DC: 1980 album, known for its high-energy rock sound and iconic riffs."
+  },
+  {
+    "id": 85,
+    "title": "The Essential Johnny Cash",
+    "artist": "Johnny Cash",
+    "genre": "Country",
+    "year": 2002,
+    "label": "Columbia",
+    "description": "A compilation album featuring Johnny Cash's most influential songs."
+  },
+  {
+    "id": 86,
+    "title": "Live at the Apollo",
+    "artist": "James Brown",
+    "genre": "Soul",
+    "year": 1963,
+    "label": "King",
+    "description": "James Brown: 1963 live album, capturing his electrifying stage presence and soul music impact."
+  },
+  {
+    "id": 87,
+    "title": "Blonde on Blonde",
+    "artist": "Bob Dylan",
+    "genre": "Folk Rock",
+    "year": 1966,
+    "label": "Columbia",
+    "description": "Dylan: 1966 double album, a pivotal release in folk rock with its poetic lyrics."
+  },
+  {
+    "id": 88,
+    "title": "Goodbye Yellow Brick Road",
+    "artist": "Elton John",
+    "genre": "Pop",
+    "year": 1973,
+    "label": "MCA",
+    "description": "Elton John: 1973 album, known for its elaborate production and wide-ranging pop hits."
+  },
+  {
+    "id": 89,
+    "title": "Legend",
+    "artist": "Bob Marley and the Wailers",
+    "genre": "Reggae",
+    "year": 1984,
+    "label": "Island",
+    "description": "A compilation of Bob Marley's greatest reggae tracks, featuring his revolutionary sound."
+  },
+  {
+    "id": 90,
+    "title": "Are You Experienced?",
+    "artist": "The Jimi Hendrix Experience",
+    "genre": "Rock",
+    "year": 1967,
+    "label": "Reprise",
+    "description": "Hendrix: 1967 debut, showcasing his groundbreaking guitar techniques and psychedelic style."
+  },
+  {
+    "id": 91,
+    "title": "Pet Sounds",
+    "artist": "The Beach Boys",
+    "genre": "Pop",
+    "year": 1966,
+    "label": "Capitol",
+    "description": "The Beach Boys: 1966 album, a revolutionary work in pop music with its intricate production."
+  },
+  {
+    "id": 92,
+    "title": "In the Court of the Crimson King",
+    "artist": "King Crimson",
+    "genre": "Progressive Rock",
+    "year": 1969,
+    "label": "Island",
+    "description": "King Crimson: 1969 debut, a landmark in progressive rock with its dark, complex sound."
+  },
+  {
+    "id": 93,
+    "title": "Songs of Innocence",
+    "artist": "U2",
+    "genre": "Rock",
+    "year": 2014,
+    "label": "Island",
+    "description": "U2: 2014 release, exploring themes of innocence with a polished, modern rock approach."
+  },
+  {
+    "id": 94,
+    "title": "Songs of Leonard Cohen",
+    "artist": "Leonard Cohen",
+    "genre": "Folk",
+    "year": 1967,
+    "label": "Columbia",
+    "description": "Leonard Cohen: debut album, known for its deep lyrical content and unique vocal style."
+  },
+  {
+    "id": 95,
+    "title": "Blonde on Blonde",
+    "artist": "Bob Dylan",
+    "genre": "Folk Rock",
+    "year": 1966,
+    "label": "Columbia",
+    "description": "A seminal folk rock album by Dylan, known for its complex lyrics and innovative sound."
+  },
+  {
+    "id": 96,
+    "title": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+    "artist": "David Bowie",
+    "genre": "Rock",
+    "year": 1972,
+    "label": "RCA",
+    "description": "Bowie: 1972 concept album, featuring his iconic Ziggy Stardust persona."
+  },
+  {
+    "id": 97,
+    "title": "Songs in the Key of Life",
+    "artist": "Stevie Wonder",
+    "genre": "Soul",
+    "year": 1976,
+    "label": "Tamla",
+    "description": "Wonder: 1976 double album, celebrated for its rich musicality and depth."
+  },
+  {
+    "id": 98,
+    "title": "Live at Leeds",
+    "artist": "The Who",
+    "genre": "Rock",
+    "year": 1970,
+    "label": "Track",
+    "description": "The Who: 1970 live recording, capturing their powerful stage presence and rock energy."
+  },
+  {
+    "id": 99,
+    "title": "A Hard Day’s Night",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1964,
+    "label": "Parlophone",
+    "description": "The Beatles: 1964 album, featuring some of their earliest and most beloved rock hits."
+  },
+  {
+    "id": 100,
+    "title": "Exile on Main St.",
+    "artist": "The Rolling Stones",
+    "genre": "Rock",
+    "year": 1972,
+    "label": "Rolling Stones",
+    "description": "The Rolling Stones: influential 1972 album, noted for its raw, diverse rock sound."
+  },
+  {
+    "id": 101,
+    "title": "The Clash",
+    "artist": "The Clash",
+    "genre": "Punk Rock",
+    "year": 1977,
+    "label": "CBS",
+    "description": "The Clash: debut album, a key release in punk rock with its energetic and political edge."
+  },
+  {
+    "id": 102,
+    "title": "Blonde on Blonde",
+    "artist": "Bob Dylan",
+    "genre": "Folk Rock",
+    "year": 1966,
+    "label": "Columbia",
+    "description": "Dylan: 1966 album, a major work in folk rock with its poetic depth and musical innovation."
+  }
+]
