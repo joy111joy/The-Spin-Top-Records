@@ -14,6 +14,7 @@ const authenticateJWT = (req, res, next) => {
     });
   } else {
     if (DEBUG) console.log("Status: 401");
+    // return res.sendStatus(401);
     req.session.status = "Please log in to view this page.";
     res.redirect("/auth");
   }
@@ -26,20 +27,7 @@ const setToken = (req, res, next) => {
   next();
 };
 
-// Middleware to ensure authentication
-function ensureAuthenticated(req, res, next) {
-  if (DEBUG) console.log("ensureAuthenticated");
-  if (DEBUG) console.log("Session: ", req.session);
-  if (req.session && req.session.user) {
-    return next();
-  } else {
-    req.session.status = "Please log in to view this page.";
-    res.redirect("/auth");
-  }
-}
-
 module.exports = {
   authenticateJWT,
   setToken,
-  ensureAuthenticated,
 };

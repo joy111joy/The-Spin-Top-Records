@@ -56,9 +56,9 @@ app.use("/search", searchRouter);
 const authRouter = require("./routes/auth");
 app.use("/auth", authRouter);
 
-// // anything beginning with "/api" will go into this
-// const apiRouter = require('./routes/api')
-// app.use('/api', apiRouter);
+//  anything beginning with "/api" will go into this
+const apiRouter = require("./routes/api");
+app.use("/api", apiRouter);
 
 app.use((req, res) => {
   res.status(404).render("404", { status: req.session.status });

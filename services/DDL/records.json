@@ -1,1013 +1,920 @@
 [
   {
-    "title": "Abbey Road",
-    "artist": "The Beatles",
+    "id": 1,
+    "title": "Back in Black",
+    "artist": "AC/DC",
     "genre": "Rock",
-    "year": 1969,
-    "label": "Apple Records",
-    "condition": "Mint",
-    "price": 30.0,
-    "description": "The eleventh studio album by the English rock band The Beatles."
+    "year": 1980,
+    "label": "Atlantic",
+    "description": "AC/DC: 1980 album, known for its electrifying rock sound and one of the best-selling albums of all time."
   },
   {
+    "id": 2,
+    "title": "The Dark Side of the Moon",
+    "artist": "Pink Floyd",
+    "genre": "Progressive Rock",
+    "year": 1973,
+    "label": "Harvest",
+    "description": "A concept album exploring the human experience with revolutionary sound and thematic depth."
+  },
+  {
+    "id": 3,
     "title": "Thriller",
     "artist": "Michael Jackson",
     "genre": "Pop",
     "year": 1982,
-    "label": "Epic Records",
-    "condition": "Near Mint",
-    "price": 25.0,
-    "description": "The sixth studio album by American singer Michael Jackson."
+    "label": "Epic",
+    "description": "Michael Jackson: 1982 record, a global phenomenon known for its innovative music videos and chart-topping hits."
   },
   {
+    "id": 4,
+    "title": "The Beatles",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1968,
+    "label": "Apple",
+    "description": "The Beatles: double album, often called the \"White Album,\" showcasing their eclectic range of styles."
+  },
+  {
+    "id": 5,
     "title": "Rumours",
     "artist": "Fleetwood Mac",
     "genre": "Rock",
     "year": 1977,
     "label": "Warner Bros.",
-    "condition": "Very Good",
-    "price": 20.0,
-    "description": "The eleventh studio album by British-American rock band Fleetwood Mac."
+    "description": "Fleetwood Mac: 1977 album, renowned for its emotional depth and classic rock anthems."
   },
   {
-    "title": "The Dark Side of the Moon",
-    "artist": "Pink Floyd",
-    "genre": "Rock",
-    "year": 1973,
-    "label": "Harvest Records",
-    "condition": "Mint",
-    "price": 35.0,
-    "description": "The eighth studio album by English rock band Pink Floyd."
-  },
-  {
-    "title": "Back in Black",
-    "artist": "AC/DC",
-    "genre": "Rock",
-    "year": 1980,
-    "label": "Atlantic Records",
-    "condition": "Good",
-    "price": 15.0,
-    "description": "The seventh studio album by Australian rock band AC/DC."
-  },
-  {
-    "title": "Hotel California",
-    "artist": "Eagles",
-    "genre": "Rock",
-    "year": 1976,
-    "label": "Asylum Records",
-    "condition": "Near Mint",
-    "price": 28.0,
-    "description": "The fifth studio album by American rock band Eagles."
-  },
-  {
-    "title": "Led Zeppelin IV",
-    "artist": "Led Zeppelin",
-    "genre": "Rock",
-    "year": 1971,
-    "label": "Atlantic Records",
-    "condition": "Mint",
-    "price": 32.0,
-    "description": "The fourth studio album by English rock band Led Zeppelin."
-  },
-  {
+    "id": 6,
     "title": "Nevermind",
     "artist": "Nirvana",
     "genre": "Grunge",
     "year": 1991,
-    "label": "DGC Records",
-    "condition": "Very Good",
-    "price": 22.0,
-    "description": "The second studio album by American rock band Nirvana."
+    "label": "DGC",
+    "description": "Nirvana 1991 breakthrough album that defined the grunge movement with its raw sound and poignant lyrics."
   },
   {
-    "title": "The Wall",
-    "artist": "Pink Floyd",
-    "genre": "Rock",
-    "year": 1979,
-    "label": "Harvest Records",
-    "condition": "Good",
-    "price": 18.0,
-    "description": "The eleventh studio album by English rock band Pink Floyd."
-  },
-  {
+    "id": 7,
     "title": "Born to Run",
     "artist": "Bruce Springsteen",
     "genre": "Rock",
     "year": 1975,
-    "label": "Columbia Records",
-    "condition": "Mint",
-    "price": 27.0,
-    "description": "The third studio album by American singer-songwriter Bruce Springsteen."
+    "label": "Columbia",
+    "description": "Springsteen: 1975 album, a landmark rock record with its epic storytelling and anthemic sound."
   },
   {
-    "title": "Purple Rain",
-    "artist": "Prince",
-    "genre": "Pop",
-    "year": 1984,
-    "label": "Warner Bros.",
-    "condition": "Near Mint",
-    "price": 24.0,
-    "description": "The sixth studio album by American recording artist Prince."
-  },
-  {
-    "title": "Sgt. Pepper's Lonely Hearts Club Band",
-    "artist": "The Beatles",
+    "id": 8,
+    "title": "Hotel California",
+    "artist": "Eagles",
     "genre": "Rock",
-    "year": 1967,
-    "label": "Parlophone",
-    "condition": "Mint",
-    "price": 33.0,
-    "description": "The eighth studio album by the English rock band The Beatles."
+    "year": 1976,
+    "label": "Asylum",
+    "description": "The Eagles: 1976 album, famous for its lush production and the iconic title track."
   },
   {
+    "id": 9,
     "title": "The Joshua Tree",
     "artist": "U2",
     "genre": "Rock",
     "year": 1987,
-    "label": "Island Records",
-    "condition": "Very Good",
-    "price": 21.0,
-    "description": "The fifth studio album by Irish rock band U2."
+    "label": "Island",
+    "description": "U2s: 1987 album, blending rock with spiritual and political themes to create a timeless classic."
   },
   {
-    "title": "Appetite for Destruction",
-    "artist": "Guns N' Roses",
+    "id": 10,
+    "title": "Abbey Road",
+    "artist": "The Beatles",
     "genre": "Rock",
-    "year": 1987,
-    "label": "Geffen Records",
-    "condition": "Good",
-    "price": 19.0,
-    "description": "The debut studio album by American hard rock band Guns N' Roses."
+    "year": 1969,
+    "label": "Apple",
+    "description": "The Beatles: 1969 album, known for its innovative recording techniques and the iconic medley on Side B."
   },
   {
-    "title": "London Calling",
-    "artist": "The Clash",
-    "genre": "Punk",
-    "year": 1979,
-    "label": "CBS Records",
-    "condition": "Mint",
-    "price": 29.0,
-    "description": "The third studio album by English punk rock band The Clash."
+    "id": 11,
+    "title": "Led Zeppelin IV",
+    "artist": "Led Zeppelin",
+    "genre": "Rock",
+    "year": 1971,
+    "label": "Atlantic",
+    "description": "A classic rock staple featuring \"Stairway to Heaven\" and a range of hard rock and acoustic tracks."
   },
   {
+    "id": 12,
     "title": "A Night at the Opera",
     "artist": "Queen",
     "genre": "Rock",
     "year": 1975,
     "label": "EMI",
-    "condition": "Near Mint",
-    "price": 26.0,
-    "description": "The fourth studio album by the British rock band Queen."
+    "description": "Queen 1975 album, famous for its operatic rock and the legendary \"Bohemian Rhapsody.\""
   },
   {
-    "title": "Who's Next",
-    "artist": "The Who",
-    "genre": "Rock",
-    "year": 1971,
-    "label": "Track Records",
-    "condition": "Very Good",
-    "price": 23.0,
-    "description": "The fifth studio album by English rock band The Who."
-  },
-  {
-    "title": "Houses of the Holy",
-    "artist": "Led Zeppelin",
-    "genre": "Rock",
-    "year": 1973,
-    "label": "Atlantic Records",
-    "condition": "Good",
-    "price": 17.0,
-    "description": "The fifth studio album by English rock band Led Zeppelin."
-  },
-  {
-    "title": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
-    "artist": "David Bowie",
-    "genre": "Rock",
-    "year": 1972,
-    "label": "RCA Records",
-    "condition": "Mint",
-    "price": 31.0,
-    "description": "The fifth studio album by English musician David Bowie."
-  },
-  {
-    "title": "Exile on Main St.",
-    "artist": "The Rolling Stones",
-    "genre": "Rock",
-    "year": 1972,
-    "label": "Rolling Stones Records",
-    "condition": "Near Mint",
-    "price": 28.0,
-    "description": "The tenth studio album by English rock band The Rolling Stones."
-  },
-  {
-    "title": "Sticky Fingers",
-    "artist": "The Rolling Stones",
-    "genre": "Rock",
-    "year": 1971,
-    "label": "Rolling Stones Records",
-    "condition": "Very Good",
-    "price": 22.0,
-    "description": "The ninth British and eleventh American studio album by The Rolling Stones."
-  },
-  {
-    "title": "Revolver",
-    "artist": "The Beatles",
-    "genre": "Rock",
-    "year": 1966,
-    "label": "Parlophone",
-    "condition": "Good",
-    "price": 20.0,
-    "description": "The seventh studio album by the English rock band The Beatles."
-  },
-  {
-    "title": "Pet Sounds",
-    "artist": "The Beach Boys",
-    "genre": "Rock",
-    "year": 1966,
-    "label": "Capitol Records",
-    "condition": "Mint",
-    "price": 34.0,
-    "description": "The eleventh studio album by American rock band The Beach Boys."
-  },
-  {
-    "title": "Blonde on Blonde",
-    "artist": "Bob Dylan",
-    "genre": "Folk Rock",
-    "year": 1966,
-    "label": "Columbia Records",
-    "condition": "Near Mint",
-    "price": 27.0,
-    "description": "The seventh studio album by American singer-songwriter Bob Dylan."
-  },
-  {
-    "title": "The Velvet Underground & Nico",
-    "artist": "The Velvet Underground",
-    "genre": "Rock",
-    "year": 1967,
-    "label": "Verve Records",
-    "condition": "Very Good",
-    "price": 25.0,
-    "description": "The debut album by American rock band The Velvet Underground and German singer Nico."
-  },
-  {
-    "title": "OK Computer",
-    "artist": "Radiohead",
-    "genre": "Alternative",
-    "year": 1997,
-    "label": "Parlophone",
-    "condition": "Good",
-    "price": 18.0,
-    "description": "The third studio album by English rock band Radiohead."
-  },
-  {
-    "title": "The Queen Is Dead",
-    "artist": "The Smiths",
-    "genre": "Alternative",
-    "year": 1986,
-    "label": "Rough Trade",
-    "condition": "Mint",
-    "price": 29.0,
-    "description": "The third studio album by English rock band The Smiths."
-  },
-  {
-    "title": "Are You Experienced",
-    "artist": "The Jimi Hendrix Experience",
-    "genre": "Rock",
-    "year": 1967,
-    "label": "Track Records",
-    "condition": "Near Mint",
-    "price": 26.0,
-    "description": "The debut studio album by the Jimi Hendrix Experience."
-  },
-  {
+    "id": 13,
     "title": "Kind of Blue",
     "artist": "Miles Davis",
     "genre": "Jazz",
     "year": 1959,
-    "label": "Columbia Records",
-    "condition": "Very Good",
-    "price": 24.0,
-    "description": "A studio album by American jazz trumpeter Miles Davis."
+    "label": "Columbia",
+    "description": "Miles Davis: 1959 album, a cornerstone of jazz featuring a groundbreaking modal approach."
   },
   {
-    "title": "Blue",
-    "artist": "Joni Mitchell",
-    "genre": "Folk",
-    "year": 1971,
-    "label": "Reprise Records",
-    "condition": "Good",
-    "price": 19.0,
-    "description": "The fourth studio album by Canadian singer-songwriter Joni Mitchell."
+    "id": 14,
+    "title": "In the Court of the Crimson King",
+    "artist": "King Crimson",
+    "genre": "Progressive Rock",
+    "year": 1969,
+    "label": "Island",
+    "description": "A landmark album in progressive rock with its complex structures and dark, atmospheric sound."
   },
   {
-    "title": "The Doors",
-    "artist": "The Doors",
-    "genre": "Rock",
-    "year": 1967,
-    "label": "Elektra Records",
-    "condition": "Mint",
-    "price": 32.0,
-    "description": "The debut studio album by American rock band The Doors."
-  },
-  {
-    "title": "Highway 61 Revisited",
-    "artist": "Bob Dylan",
-    "genre": "Folk Rock",
-    "year": 1965,
-    "label": "Columbia Records",
-    "condition": "Near Mint",
-    "price": 28.0,
-    "description": "The sixth studio album by American singer-songwriter Bob Dylan."
-  },
-  {
-    "title": "Electric Ladyland",
-    "artist": "The Jimi Hendrix Experience",
-    "genre": "Rock",
-    "year": 1968,
-    "label": "Track Records",
-    "condition": "Very Good",
-    "price": 23.0,
-    "description": "The third and final studio album by the Jimi Hendrix Experience."
-  },
-  {
-    "title": "Blood on the Tracks",
-    "artist": "Bob Dylan",
-    "genre": "Folk Rock",
-    "year": 1975,
-    "label": "Columbia Records",
-    "condition": "Good",
-    "price": 20.0,
-    "description": "The fifteenth studio album by American singer-songwriter Bob Dylan."
-  },
-  {
-    "title": "The Beatles (The White Album)",
-    "artist": "The Beatles",
-    "genre": "Rock",
-    "year": 1968,
-    "label": "Apple Records",
-    "condition": "Mint",
-    "price": 35.0,
-    "description": "The ninth studio album by the English rock band The Beatles."
-  },
-  {
-    "title": "The Rolling Stones",
-    "artist": "The Rolling Stones",
-    "genre": "Rock",
-    "year": 1964,
-    "label": "Decca",
-    "condition": "Near Mint",
-    "price": 27.0,
-    "description": "The debut studio album by English rock band The Rolling Stones."
-  },
-  {
-    "title": "Bridge Over Troubled Water",
-    "artist": "Simon & Garfunkel",
-    "genre": "Folk Rock",
-    "year": 1970,
-    "label": "Columbia Records",
-    "condition": "Very Good",
-    "price": 22.0,
-    "description": "The fifth and final studio album by American folk rock duo Simon & Garfunkel."
-  },
-  {
-    "title": "Tapestry",
-    "artist": "Carole King",
+    "id": 15,
+    "title": "Pet Sounds",
+    "artist": "The Beach Boys",
     "genre": "Pop",
-    "year": 1971,
-    "label": "Ode Records",
-    "condition": "Good",
-    "price": 18.0,
-    "description": "The second studio album by American singer-songwriter Carole King."
+    "year": 1966,
+    "label": "Capitol",
+    "description": "The Beach Boys: 1966 album, renowned for its sophisticated production and harmonically rich sound."
   },
   {
-    "title": "The Freewheelin' Bob Dylan",
+    "id": 16,
+    "title": "To Pimp a Butterfly",
+    "artist": "Kendrick Lamar",
+    "genre": "Hip Hop",
+    "year": 2015,
+    "label": "Top Dawg",
+    "description": "Kendrick Lamar: 2015 album, a powerful exploration of race and identity with a diverse musical landscape."
+  },
+  {
+    "id": 17,
+    "title": "Blonde on Blonde",
     "artist": "Bob Dylan",
-    "genre": "Folk",
-    "year": 1963,
-    "label": "Columbia Records",
-    "condition": "Mint",
-    "price": 30.0,
-    "description": "The second studio album by American singer-songwriter Bob Dylan."
+    "genre": "Folk Rock",
+    "year": 1966,
+    "label": "Columbia",
+    "description": "Bob Dylan: 1966 album, known for its complex lyrics and fusion of rock and folk influences."
   },
   {
+    "id": 18,
+    "title": "Born in the U.S.A.",
+    "artist": "Bruce Springsteen",
+    "genre": "Rock",
+    "year": 1984,
+    "label": "Columbia",
+    "description": "Springsteen: 1984 album, featuring anthems that explore American life and its struggles."
+  },
+  {
+    "id": 19,
+    "title": "The Suburbs",
+    "artist": "Arcade Fire",
+    "genre": "Indie Rock",
+    "year": 2010,
+    "label": "Merge",
+    "description": "Arcade Fire: 2010 album, acclaimed for its reflection on suburban life and its expansive, anthemic sound."
+  },
+  {
+    "id": 20,
+    "title": "Dark Side of the Moon",
+    "artist": "Pink Floyd",
+    "genre": "Progressive Rock",
+    "year": 1973,
+    "label": "Harvest",
+    "description": "Pink Floyd: iconic 1973 concept album, celebrated for its sonic innovation and thematic coherence."
+  },
+  {
+    "id": 21,
+    "title": "Goodbye Yellow Brick Road",
+    "artist": "Elton John",
+    "genre": "Pop",
+    "year": 1973,
+    "label": "MCA",
+    "description": "Elton John: 1973 double album, featuring a mix of pop hits and intricate compositions."
+  },
+  {
+    "id": 22,
+    "title": "The Wall",
+    "artist": "Pink Floyd",
+    "genre": "Progressive Rock",
+    "year": 1979,
+    "label": "Columbia",
+    "description": "Pink Floyd: 1979 rock opera, a profound exploration of isolation and mental anguish."
+  },
+  {
+    "id": 23,
+    "title": "The Bends",
+    "artist": "Radiohead",
+    "genre": "Alternative Rock",
+    "year": 1995,
+    "label": "Parlophone",
+    "description": "Radiohead: 1995 album, known for its emotive lyrics and innovative guitar work."
+  },
+  {
+    "id": 24,
+    "title": "Lust for Life",
+    "artist": "Iggy Pop",
+    "genre": "Rock",
+    "year": 1977,
+    "label": "Arista",
+    "description": "Iggy Pop: 1977 album, featuring a raw rock sound and energetic performances."
+  },
+  {
+    "id": 25,
+    "title": "Odessey and Oracle",
+    "artist": "The Zombies",
+    "genre": "Pop",
+    "year": 1968,
+    "label": "Date",
+    "description": "A psychedelic pop masterpiece with lush arrangements and enduring melodies."
+  },
+  {
+    "id": 26,
+    "title": "Genius of Modern Music",
+    "artist": "Thelonious Monk",
+    "genre": "Jazz",
+    "year": 1956,
+    "label": "Blue Note",
+    "description": "Monk: groundbreaking 1956 album, showcasing his unique compositions and improvisational style."
+  },
+  {
+    "id": 27,
     "title": "A Love Supreme",
     "artist": "John Coltrane",
     "genre": "Jazz",
     "year": 1965,
-    "label": "Impulse! Records",
-    "condition": "Near Mint",
-    "price": 29.0,
-    "description": "A studio album by American jazz saxophonist John Coltrane."
+    "label": "Impulse!",
+    "description": "John Coltrane: spiritual jazz suite, revered for its profound impact and innovative approach."
   },
   {
-    "title": "Never Mind the Bollocks, Here's the Sex Pistols",
-    "artist": "Sex Pistols",
-    "genre": "Punk",
-    "year": 1977,
-    "label": "Virgin Records",
-    "condition": "Very Good",
-    "price": 24.0,
-    "description": "The only studio album by English punk rock band the Sex Pistols."
-  },
-  {
-    "title": "The Clash",
-    "artist": "The Clash",
-    "genre": "Punk",
-    "year": 1977,
-    "label": "CBS Records",
-    "condition": "Good",
-    "price": 19.0,
-    "description": "The debut studio album by English punk rock band The Clash."
-  },
-  {
-    "title": "Rumor and Sigh",
-    "artist": "Richard Thompson",
-    "genre": "Folk Rock",
-    "year": 1991,
-    "label": "Capitol Records",
-    "condition": "Mint",
-    "price": 28.0,
-    "description": "The sixth solo album by English singer-songwriter Richard Thompson."
-  },
-  {
-    "title": "Harvest",
-    "artist": "Neil Young",
-    "genre": "Folk Rock",
-    "year": 1972,
-    "label": "Reprise Records",
-    "condition": "Near Mint",
-    "price": 26.0,
-    "description": "The fourth studio album by Canadian musician Neil Young."
-  },
-  {
-    "title": "Hotel California",
-    "artist": "Eagles",
+    "id": 28,
+    "title": "Are You Experienced?",
+    "artist": "The Jimi Hendrix Experience",
     "genre": "Rock",
-    "year": 1976,
-    "label": "Asylum Records",
-    "condition": "Very Good",
-    "price": 23.0,
-    "description": "The fifth studio album by American rock band Eagles."
+    "year": 1967,
+    "label": "Reprise",
+    "description": "Jimi Hendrix: groundbreaking debut, known for its innovative guitar work and psychedelic sound."
   },
   {
-    "title": "The Marshall Mathers LP",
-    "artist": "Eminem",
-    "genre": "Hip Hop",
-    "year": 2000,
-    "label": "Interscope Records",
-    "condition": "Good",
-    "price": 21.0,
-    "description": "The third studio album by American rapper Eminem."
-  },
-  {
-    "title": "Mothership Connection",
-    "artist": "Parliament",
-    "genre": "Funk",
-    "year": 1975,
-    "label": "Casablanca Records",
-    "condition": "Mint",
-    "price": 30.0,
-    "description": "The fourth album by American funk band Parliament."
-  },
-  {
-    "title": "Innervisions",
-    "artist": "Stevie Wonder",
-    "genre": "Soul",
-    "year": 1973,
-    "label": "Tamla",
-    "condition": "Near Mint",
-    "price": 27.0,
-    "description": "The sixteenth studio album by American musician Stevie Wonder."
-  },
-  {
-    "title": "Low",
-    "artist": "David Bowie",
-    "genre": "Rock",
-    "year": 1977,
-    "label": "RCA Records",
-    "condition": "Very Good",
-    "price": 24.0,
-    "description": "The eleventh studio album by English musician David Bowie."
-  },
-  {
-    "title": "The Miseducation of Lauryn Hill",
-    "artist": "Lauryn Hill",
-    "genre": "Hip Hop",
-    "year": 1998,
-    "label": "Ruffhouse Records",
-    "condition": "Good",
-    "price": 22.0,
-    "description": "The debut solo album by American singer and rapper Lauryn Hill."
-  },
-  {
+    "id": 29,
     "title": "Songs in the Key of Life",
     "artist": "Stevie Wonder",
     "genre": "Soul",
     "year": 1976,
     "label": "Tamla",
-    "condition": "Mint",
-    "price": 34.0,
-    "description": "The eighteenth studio album by American musician Stevie Wonder."
-  },
-
-  {
-    "title": "The Chronic",
-    "artist": "Dr. Dre",
-    "genre": "Hip Hop",
-    "year": 1992,
-    "label": "Death Row Records",
-    "condition": "Near Mint",
-    "price": 29.0,
-    "description": "The debut studio album by American hip hop producer and rapper Dr. Dre."
+    "description": "Stevie Wonder: 1976 double album, celebrated for its rich arrangements and lyrical depth."
   },
   {
-    "title": "Graceland",
-    "artist": "Paul Simon",
-    "genre": "Pop",
-    "year": 1986,
-    "label": "Warner Bros.",
-    "condition": "Very Good",
-    "price": 25.0,
-    "description": "The seventh solo studio album by American singer-songwriter Paul Simon."
-  },
-  {
-    "title": "Doolittle",
-    "artist": "Pixies",
-    "genre": "Alternative",
-    "year": 1989,
-    "label": "4AD",
-    "condition": "Good",
-    "price": 20.0,
-    "description": "The second studio album by American alternative rock band Pixies."
-  },
-  {
-    "title": "The Low End Theory",
-    "artist": "A Tribe Called Quest",
-    "genre": "Hip Hop",
-    "year": 1991,
-    "label": "Jive Records",
-    "condition": "Mint",
-    "price": 32.0,
-    "description": "The second studio album by American hip hop group A Tribe Called Quest."
-  },
-  {
-    "title": "Blood Sugar Sex Magik",
-    "artist": "Red Hot Chili Peppers",
+    "id": 30,
+    "title": "Electric Ladyland",
+    "artist": "The Jimi Hendrix Experience",
     "genre": "Rock",
-    "year": 1991,
-    "label": "Warner Bros.",
-    "condition": "Near Mint",
-    "price": 28.0,
-    "description": "The fifth studio album by American rock band Red Hot Chili Peppers."
+    "year": 1968,
+    "label": "Reprise",
+    "description": "Jimi Hendrix: 1968 album, known for its experimental approach and psychedelic sound."
   },
   {
-    "title": "The Smiths",
-    "artist": "The Smiths",
-    "genre": "Alternative",
-    "year": 1984,
-    "label": "Rough Trade",
-    "condition": "Very Good",
-    "price": 25.0,
-    "description": "The debut studio album by English rock band The Smiths."
-  },
-  {
-    "title": "The Bends",
-    "artist": "Radiohead",
-    "genre": "Alternative",
-    "year": 1995,
-    "label": "Parlophone",
-    "condition": "Good",
-    "price": 22.0,
-    "description": "Second studio album by the English rock band Radiohead."
-  },
-  {
-    "title": "Ten",
-    "artist": "Pearl Jam",
+    "id": 31,
+    "title": "Exile on Main St.",
+    "artist": "The Rolling Stones",
     "genre": "Rock",
-    "year": 1991,
-    "label": "Epic Records",
-    "condition": "Mint",
-    "price": 30.0,
-    "description": "Debut studio album by American rock band Pearl Jam."
+    "year": 1972,
+    "label": "Rolling Stones",
+    "description": "The Rolling Stones: gritty 1972 album, known for its diverse styles and raw energy."
   },
   {
-    "title": "Automatic for the People",
-    "artist": "R.E.M.",
-    "genre": "Alternative",
-    "year": 1992,
-    "label": "Warner Bros.",
-    "condition": "Near Mint",
-    "price": 27.0,
-    "description": "Eighth studio album by American alternative rock band R.E.M."
-  },
-  {
-    "title": "Loveless",
-    "artist": "My Bloody Valentine",
-    "genre": "Alternative",
-    "year": 1991,
-    "label": "Creation Records",
-    "condition": "Very Good",
-    "price": 26.0,
-    "description": "Second studio album by the Irish-English rock band My Bloody Valentine."
-  },
-  {
-    "title": "The Stone Roses",
-    "artist": "The Stone Roses",
-    "genre": "Alternative",
-    "year": 1989,
-    "label": "Silvertone",
-    "condition": "Good",
-    "price": 23.0,
-    "description": "Debut studio album by English rock band The Stone Roses."
-  },
-  {
-    "title": "Grace",
-    "artist": "Jeff Buckley",
-    "genre": "Rock",
-    "year": 1994,
-    "label": "Columbia Records",
-    "condition": "Mint",
-    "price": 31.0,
-    "description": "Debut studio album by American singer-songwriter Jeff Buckley."
-  },
-  {
-    "title": "Is This It",
-    "artist": "The Strokes",
-    "genre": "Rock",
-    "year": 2001,
-    "label": "RCA Records",
-    "condition": "Near Mint",
-    "price": 28.0,
-    "description": "Debut studio album by American rock band The Strokes."
-  },
-  {
-    "title": "The College Dropout",
-    "artist": "Kanye West",
-    "genre": "Hip Hop",
-    "year": 2004,
-    "label": "Roc-A-Fella Records",
-    "condition": "Very Good",
-    "price": 24.0,
-    "description": "Debut studio album by American rapper and producer Kanye West."
-  },
-  {
-    "title": "Elephant",
-    "artist": "The White Stripes",
-    "genre": "Rock",
-    "year": 2003,
-    "label": "V2 Records",
-    "condition": "Good",
-    "price": 22.0,
-    "description": "Fourth studio album by American rock duo The White Stripes."
-  },
-  {
-    "title": "Turn On the Bright Lights",
-    "artist": "Interpol",
-    "genre": "Rock",
-    "year": 2002,
-    "label": "Matador Records",
-    "condition": "Mint",
-    "price": 29.0,
-    "description": "Debut studio album by American rock band Interpol."
-  },
-  {
-    "title": "Yankee Hotel Foxtrot",
-    "artist": "Wilco",
-    "genre": "Alternative",
-    "year": 2002,
-    "label": "Nonesuch Records",
-    "condition": "Near Mint",
-    "price": 27.0,
-    "description": "Fourth studio album by American alternative rock band Wilco."
-  },
-  {
-    "title": "The Black Album",
-    "artist": "Jay-Z",
-    "genre": "Hip Hop",
-    "year": 2003,
-    "label": "Roc-A-Fella Records",
-    "condition": "Very Good",
-    "price": 26.0,
-    "description": "Eighth studio album by American rapper Jay-Z."
-  },
-  {
-    "title": "Funeral",
-    "artist": "Arcade Fire",
-    "genre": "Indie Rock",
-    "year": 2004,
-    "label": "Merge Records",
-    "condition": "Good",
-    "price": 23.0,
-    "description": "Debut studio album by Canadian indie rock band Arcade Fire."
-  },
-  {
+    "id": 32,
     "title": "Back to Black",
     "artist": "Amy Winehouse",
     "genre": "Soul",
     "year": 2006,
-    "label": "Island Records",
-    "condition": "Mint",
-    "price": 31.0,
-    "description": "Second and final studio album by English singer and songwriter Amy Winehouse."
+    "label": "Island",
+    "description": "Amy Winehouse: 2006 album, celebrated for its deep, soulful sound and confessional lyrics."
   },
   {
-    "title": "American Idiot",
-    "artist": "Green Day",
-    "genre": "Punk Rock",
-    "year": 2004,
-    "label": "Reprise Records",
-    "condition": "Near Mint",
-    "price": 28.0,
-    "description": "Seventh studio album by American rock band Green Day."
+    "id": 33,
+    "title": "The Queen Is Dead",
+    "artist": "The Smiths",
+    "genre": "Alternative Rock",
+    "year": 1986,
+    "label": "Rough Trade",
+    "description": "The Smiths: 1986 album, known for its introspective lyrics and influential sound."
   },
   {
-    "title": "A Rush of Blood to the Head",
-    "artist": "Coldplay",
-    "genre": "Alternative",
-    "year": 2002,
-    "label": "Parlophone",
-    "condition": "Very Good",
-    "price": 25.0,
-    "description": "Second studio album by British rock band Coldplay."
-  },
-  {
-    "title": "The Eminem Show",
-    "artist": "Eminem",
-    "genre": "Hip Hop",
-    "year": 2002,
-    "label": "Aftermath",
-    "condition": "Good",
-    "price": 22.0,
-    "description": "Fourth studio album by American rapper Eminem."
-  },
-  {
-    "title": "Good Kid, M.A.A.D City",
-    "artist": "Kendrick Lamar",
-    "genre": "Hip Hop",
-    "year": 2012,
-    "label": "Top Dawg Entertainment",
-    "condition": "Mint",
-    "price": 33.0,
-    "description": "Second studio album by American rapper Kendrick Lamar."
-  },
-  {
-    "title": "Channel Orange",
-    "artist": "Frank Ocean",
-    "genre": "R&B",
-    "year": 2012,
-    "label": "Def Jam Recordings",
-    "condition": "Near Mint",
-    "price": 30.0,
-    "description": "Debut studio album by American singer Frank Ocean."
-  },
-  {
-    "title": "My Beautiful Dark Twisted Fantasy",
-    "artist": "Kanye West",
-    "genre": "Hip Hop",
-    "year": 2010,
-    "label": "Roc-A-Fella Records",
-    "condition": "Very Good",
-    "price": 28.0,
-    "description": "Fifth studio album by American rapper and producer Kanye West."
-  },
-  {
-    "title": "To Pimp a Butterfly",
-    "artist": "Kendrick Lamar",
-    "genre": "Hip Hop",
-    "year": 2015,
-    "label": "Top Dawg Entertainment",
-    "condition": "Good",
-    "price": 25.0,
-    "description": "Third studio album by American rapper Kendrick Lamar."
-  },
-  {
-    "title": "Lemonade",
-    "artist": "Beyoncé",
-    "genre": "R&B",
-    "year": 2016,
-    "label": "Parkwood Entertainment",
-    "condition": "Mint",
-    "price": 35.0,
-    "description": "Sixth studio album by American singer Beyoncé."
-  },
-  {
-    "title": "DAMN.",
-    "artist": "Kendrick Lamar",
-    "genre": "Hip Hop",
-    "year": 2017,
-    "label": "Top Dawg Entertainment",
-    "condition": "Near Mint",
-    "price": 32.0,
-    "description": "Fourth studio album by American rapper Kendrick Lamar."
-  },
-  {
-    "title": "Blonde",
-    "artist": "Frank Ocean",
-    "genre": "R&B",
-    "year": 2016,
-    "label": "Boys Don't Cry",
-    "condition": "Very Good",
-    "price": 29.0,
-    "description": "Second studio album by American singer Frank Ocean."
-  },
-  {
-    "title": "Melodrama",
-    "artist": "Lorde",
-    "genre": "Pop",
-    "year": 2017,
-    "label": "Lava Records",
-    "condition": "Good",
-    "price": 27.0,
-    "description": "Second studio album by New Zealand singer Lorde."
-  },
-  {
-    "title": "Currents",
-    "artist": "Tame Impala",
-    "genre": "Psychedelic Rock",
-    "year": 2015,
-    "label": "Modular Recordings",
-    "condition": "Mint",
-    "price": 34.0,
-    "description": "Third studio album by Australian musical project Tame Impala."
-  },
-  {
-    "title": "Ctrl",
-    "artist": "SZA",
-    "genre": "R&B",
-    "year": 2017,
-    "label": "Top Dawg Entertainment",
-    "condition": "Near Mint",
-    "price": 31.0,
-    "description": "Debut studio album by American singer SZA."
-  },
-  {
-    "title": "Anti",
-    "artist": "Rihanna",
-    "genre": "R&B",
-    "year": 2016,
-    "label": "Westbury Road",
-    "condition": "Very Good",
-    "price": 28.0,
-    "description": "Eighth studio album by American singer Rihanna."
-  },
-  {
-    "title": "Views",
-    "artist": "Drake",
-    "genre": "Hip Hop",
-    "year": 2016,
-    "label": "OVO Sound",
-    "condition": "Good",
-    "price": 25.0,
-    "description": "Second studio album by American rapper Drake."
-  },
-  {
-    "title": "The Life of Pablo",
-    "artist": "Pablo Honey",
-    "genre": "Alternative",
-    "year": 2003,
+    "id": 34,
+    "title": "A Night at the Opera",
+    "artist": "Queen",
+    "genre": "Rock",
+    "year": 1975,
     "label": "EMI",
-    "condition": "Mint",
-    "price": 32.0,
-    "description": "Second studio album by English rock band Pablo Honey."
+    "description": "Queen: 1975 album, known for its elaborate production and operatic rock songs."
   },
   {
-    "title": "The College Dropout",
-    "artist": "Kanye West",
+    "id": 35,
+    "title": "Tusk",
+    "artist": "Fleetwood Mac",
+    "genre": "Rock",
+    "year": 1979,
+    "label": "Warner Bros.",
+    "description": "Fleetwood Mac: ambitious 1979 double album, recognized for its experimental sound and diverse tracks."
+  },
+  {
+    "id": 36,
+    "title": "The Low End Theory",
+    "artist": "A Tribe Called Quest",
     "genre": "Hip Hop",
-    "year": 2004,
-    "label": "Roc-A-Fella Records",
-    "condition": "Near Mint",
-    "price": 29.0,
-    "description": "Second studio album by American rapper and producer Kanye West."
+    "year": 1991,
+    "label": "Jive",
+    "description": "A Tribe Called Quest: 1991 album, influential in shaping the sound of hip-hop with its jazzy beats and insightful lyrics."
   },
   {
-    "title": "Future Nostalgia",
-    "artist": "Dua Lipa",
+    "id": 37,
+    "title": "Blue Lines",
+    "artist": "Massive Attack",
+    "genre": "Trip Hop",
+    "year": 1991,
+    "label": "Virgin",
+    "description": "Massive Attack: 1991 debut, pioneering the trip-hop genre with its atmospheric and moody sound."
+  },
+  {
+    "id": 38,
+    "title": "Blonde on Blonde",
+    "artist": "Bob Dylan",
+    "genre": "Folk Rock",
+    "year": 1966,
+    "label": "Columbia",
+    "description": "Dylan: 1966 double album, a landmark in rock with its poetic lyrics and diverse sound."
+  },
+  {
+    "id": 39,
+    "title": "Houses of the Holy",
+    "artist": "Led Zeppelin",
+    "genre": "Rock",
+    "year": 1973,
+    "label": "Atlantic",
+    "description": "Led Zeppelin: 1973 album, showcasing a mix of hard rock and experimental sounds."
+  },
+  {
+    "id": 40,
+    "title": "In Utero",
+    "artist": "Nirvana",
+    "genre": "Grunge",
+    "year": 1993,
+    "label": "DGC",
+    "description": "Nirvana: 1993 follow-up to \"Nevermind,\" known for its raw sound and darker themes."
+  },
+  {
+    "id": 41,
+    "title": "The Piper at the Gates of Dawn",
+    "artist": "Pink Floyd",
+    "genre": "Psychedelic Rock",
+    "year": 1967,
+    "label": "Columbia",
+    "description": "Pink Floyd: 1967 debut, a seminal work in psychedelic rock with its experimental sounds."
+  },
+  {
+    "id": 42,
+    "title": "The Essential Bob Dylan",
+    "artist": "Bob Dylan",
+    "genre": "Folk Rock",
+    "year": 2000,
+    "label": "Columbia",
+    "description": "A compilation of Bob Dylan: most impactful tracks, highlighting his influence on rock and folk music."
+  },
+  {
+    "id": 43,
+    "title": "Greatest Hits",
+    "artist": "ABBA",
     "genre": "Pop",
-    "year": 2020,
-    "label": "Warner Records",
-    "condition": "Good",
-    "price": 27.0,
-    "description": "Second studio album by English singer Dua Lipa."
+    "year": 1975,
+    "label": "Epic",
+    "description": "ABBA: compilation album, featuring their most memorable hits and pop classics."
   },
   {
-    "title": "Folklore",
-    "artist": "Taylor Swift",
-    "genre": "Indie Folk",
-    "year": 2020,
-    "label": "Republic Records",
-    "condition": "Mint",
-    "price": 34.0,
-    "description": "Eighth studio album by American singer-songwriter Taylor Swift."
+    "id": 44,
+    "title": "Hymns to the Silence",
+    "artist": "Van Morrison",
+    "genre": "Rock",
+    "year": 1991,
+    "label": "Mercury",
+    "description": "Van Morrison: 1991 release, known for its introspective lyrics and soulful melodies."
   },
   {
-    "title": "After Hours",
-    "artist": "The Weeknd",
-    "genre": "R&B",
-    "year": 2020,
-    "label": "XO",
-    "condition": "Near Mint",
-    "price": 31.0,
-    "description": "Fourth studio album by Canadian singer The Weeknd."
+    "id": 45,
+    "title": "Paranoid",
+    "artist": "Black Sabbath",
+    "genre": "Heavy Metal",
+    "year": 1970,
+    "label": "Vertigo",
+    "description": "Black Sabbath: 1970 album, a milestone in heavy metal with its dark, powerful riffs."
   },
   {
-    "title": "When We All Fall Asleep, Where Do We Go?",
-    "artist": "Billie Eilish",
+    "id": 46,
+    "title": "Born to Run",
+    "artist": "Bruce Springsteen",
+    "genre": "Rock",
+    "year": 1975,
+    "label": "Columbia",
+    "description": "A seminal rock album by Bruce Springsteen, celebrated for its epic sound and lyrical storytelling."
+  },
+  {
+    "id": 47,
+    "title": "The Very Best of The Kinks",
+    "artist": "The Kinks",
+    "genre": "Rock",
+    "year": 1998,
+    "label": "Castle",
+    "description": "A compilation of The Kinks: greatest hits, highlighting their unique sound and influence."
+  },
+  {
+    "id": 48,
+    "title": "American Recordings",
+    "artist": "Johnny Cash",
+    "genre": "Country",
+    "year": 1994,
+    "label": "American",
+    "description": "Johnny Cash: 1994 album, noted for its stripped-down production and emotional resonance."
+  },
+  {
+    "id": 49,
+    "title": "Goodbye Yellow Brick Road",
+    "artist": "Elton John",
     "genre": "Pop",
-    "year": 2019,
-    "label": "Interscope Records",
-    "condition": "Very Good",
-    "price": 28.0,
-    "description": "Debut studio album by American singer Billie Eilish."
+    "year": 1973,
+    "label": "MCA",
+    "description": "Elton John: 1973 album, showcasing his range of pop and rock styles with memorable tracks."
   },
   {
-    "title": "FutureSex/LoveSounds",
-    "artist": "Justin Timberlake",
+    "id": 50,
+    "title": "Who’s Next",
+    "artist": "The Who",
+    "genre": "Rock",
+    "year": 1971,
+    "label": "Decca",
+    "description": "The Who: 1971 album, known for its innovative use of synthesizers and powerful rock sound."
+  },
+  {
+    "id": 51,
+    "title": "Tales of Mystery and Imagination",
+    "artist": "Alan Parsons Project",
+    "genre": "Progressive Rock",
+    "year": 1976,
+    "label": "Arista",
+    "description": "Alan Parsons Project: 1976 debut, a concept album inspired by Edgar Allan Poes works."
+  },
+  {
+    "id": 52,
+    "title": "Live at Leeds",
+    "artist": "The Who",
+    "genre": "Rock",
+    "year": 1970,
+    "label": "Track",
+    "description": "The Who: 1970 live album, celebrated for its raw energy and electrifying performances."
+  },
+  {
+    "id": 53,
+    "title": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+    "artist": "David Bowie",
+    "genre": "Rock",
+    "year": 1972,
+    "label": "RCA",
+    "description": "David Bowie: 1972 concept album, featuring his iconic Ziggy Stardust persona and innovative rock sound."
+  },
+  {
+    "id": 54,
+    "title": "Songs of Leonard Cohen",
+    "artist": "Leonard Cohen",
+    "genre": "Folk",
+    "year": 1967,
+    "label": "Columbia",
+    "description": "Leonard Cohen: 1967 debut, known for its profound lyrics and Cohen's deep, resonant voice."
+  },
+  {
+    "id": 55,
+    "title": "The Band",
+    "artist": "The Band",
+    "genre": "Rock",
+    "year": 1969,
+    "label": "Capitol",
+    "description": "The Band: self-titled 1969 album, blending rock with Americana influences."
+  },
+  {
+    "id": 56,
+    "title": "Are You Experienced?",
+    "artist": "The Jimi Hendrix Experience",
+    "genre": "Rock",
+    "year": 1967,
+    "label": "Reprise",
+    "description": "Jimi Hendrix: 1967 debut, showcasing his groundbreaking guitar techniques and psychedelic sound."
+  },
+  {
+    "id": 57,
+    "title": "Greatest Hits",
+    "artist": "Elton John",
     "genre": "Pop",
-    "year": 2006,
-    "label": "Jive Records",
-    "condition": "Good",
-    "price": 26.0,
-    "description": "Second studio album by American singer Justin Timberlake."
+    "year": 1974,
+    "label": "MCA",
+    "description": "A collection of Elton John's most popular songs from the early 1970s, displaying his pop brilliance."
   },
   {
-    "title": "good kid, m.A.A.d city",
-    "artist": "Kendrick Lamar",
-    "genre": "Hip Hop",
-    "year": 2012,
-    "label": "Top Dawg Entertainment",
-    "condition": "Mint",
-    "price": 33.0,
-    "description": "Second studio album by American rapper Kendrick Lamar."
+    "id": 58,
+    "title": "White Album",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1968,
+    "label": "Apple",
+    "description": "The Beatles: 1968 double album, known for its eclectic mix of styles and experimental approach."
   },
   {
-    "title": "Take Care",
-    "artist": "Drake",
-    "genre": "Hip Hop",
-    "year": 2011,
-    "label": "Young Money",
-    "condition": "Near Mint",
-    "price": 30.0,
-    "description": "Second studio album by Canadian rapper Drake."
+    "id": 59,
+    "title": "The Essential Johnny Cash",
+    "artist": "Johnny Cash",
+    "genre": "Country",
+    "year": 2002,
+    "label": "Columbia",
+    "description": "A compilation of Johnny Cash's most influential tracks, highlighting his powerful storytelling."
   },
   {
-    "title": "Born to Die",
-    "artist": "Lana Del Rey",
+    "id": 60,
+    "title": "Never Mind the Bollocks, Here’s the Sex Pistols",
+    "artist": "Sex Pistols",
+    "genre": "Punk Rock",
+    "year": 1977,
+    "label": "Virgin",
+    "description": "The Sex Pistols: 1977 debut, a cornerstone of punk rock with its raw sound and rebellious attitude."
+  },
+  {
+    "id": 61,
+    "title": "Electric Warrior",
+    "artist": "T. Rex",
+    "genre": "Glam Rock",
+    "year": 1971,
+    "label": "T. Rex",
+    "description": "T. Rex: 1971 album, a defining release in glam rock with catchy melodies and flamboyant style."
+  },
+  {
+    "id": 62,
+    "title": "Songs in the Key of Life",
+    "artist": "Stevie Wonder",
+    "genre": "Soul",
+    "year": 1976,
+    "label": "Tamla",
+    "description": "Stevie Wonder: 1976 double album, acclaimed for its rich musicality and lyrical depth."
+  },
+  {
+    "id": 63,
+    "title": "Rumours",
+    "artist": "Fleetwood Mac",
+    "genre": "Rock",
+    "year": 1977,
+    "label": "Warner Bros.",
+    "description": "Fleetwood Mac: 1977 album, a rock classic known for its emotional and musical complexity."
+  },
+  {
+    "id": 64,
+    "title": "The Very Best of The Kinks",
+    "artist": "The Kinks",
+    "genre": "Rock",
+    "year": 1998,
+    "label": "Castle",
+    "description": "A collection of The Kinks' greatest hits, reflecting their distinctive sound and influence."
+  },
+  {
+    "id": 65,
+    "title": "The Queen Is Dead",
+    "artist": "The Smiths",
+    "genre": "Alternative Rock",
+    "year": 1986,
+    "label": "Rough Trade",
+    "description": "The Smiths: 1986 album, known for its melancholic lyrics and influential alternative rock sound."
+  },
+  {
+    "id": 66,
+    "title": "Songs of Innocence",
+    "artist": "U2",
+    "genre": "Rock",
+    "year": 2014,
+    "label": "Island",
+    "description": "U2: 2014 album, exploring themes of innocence with a polished rock sound."
+  },
+  {
+    "id": 67,
+    "title": "Lonesome Dreams",
+    "artist": "Foy Vance",
+    "genre": "Country",
+    "year": 2014,
+    "label": "RCA",
+    "description": "Foy Vance: 2014 release, blending folk and country with heartfelt lyrics and melodies."
+  },
+  {
+    "id": 68,
+    "title": "Blonde on Blonde",
+    "artist": "Bob Dylan",
+    "genre": "Folk Rock",
+    "year": 1966,
+    "label": "Columbia",
+    "description": "Bob Dylan: 1966 album, an influential work in folk rock with its complex lyrics and innovative sound."
+  },
+  {
+    "id": 69,
+    "title": "The Essential Johnny Cash",
+    "artist": "Johnny Cash",
+    "genre": "Country",
+    "year": 2002,
+    "label": "Columbia",
+    "description": "A collection of Johnny Cash's most iconic tracks, showcasing his deep, resonant voice and storytelling."
+  },
+  {
+    "id": 70,
+    "title": "Back in Black",
+    "artist": "AC/DC",
+    "genre": "Rock",
+    "year": 1980,
+    "label": "Atlantic",
+    "description": "AC/DC: 1980 release, celebrated for its powerful riffs and enduring rock anthems."
+  },
+  {
+    "id": 71,
+    "title": "Legend",
+    "artist": "Bob Marley and the Wailers",
+    "genre": "Reggae",
+    "year": 1984,
+    "label": "Island",
+    "description": "A compilation of Bob Marley's greatest hits, highlighting his revolutionary reggae sound."
+  },
+  {
+    "id": 72,
+    "title": "Goodbye Yellow Brick Road",
+    "artist": "Elton John",
     "genre": "Pop",
-    "year": 2012,
-    "label": "Interscope Records",
-    "condition": "Very Good",
-    "price": 28.0,
-    "description": "Second studio album by American singer Lana Del Rey."
+    "year": 1973,
+    "label": "MCA",
+    "description": "Elton John: 1973 classic, featuring a mix of pop and rock with elaborate production."
   },
   {
-    "title": "Blurryface",
-    "artist": "Twenty One Pilots",
-    "genre": "Alternative",
-    "year": 2015,
-    "label": "Fueled by Ramen",
-    "condition": "Good",
-    "price": 26.0,
-    "description": "Fourth studio album by American musical duo Twenty One Pilots."
+    "id": 73,
+    "title": "Songs of Innocence",
+    "artist": "U2",
+    "genre": "Rock",
+    "year": 2014,
+    "label": "Island",
+    "description": "U2: 2014 album, a polished rock exploration of youth and innocence."
   },
   {
-    "title": "Random Access Memories",
-    "artist": "Daft Punk",
-    "genre": "Electronic",
-    "year": 2013,
-    "label": "Columbia Records",
-    "condition": "Mint",
-    "price": 35.0,
-    "description": "Fourth studio album by French electronic duo Daft Punk."
+    "id": 74,
+    "title": "Tales of Mystery and Imagination",
+    "artist": "Alan Parsons Project",
+    "genre": "Progressive Rock",
+    "year": 1976,
+    "label": "Arista",
+    "description": "Alan Parsons Project: 1976 debut, a concept album based on Edgar Allan Poe."
   },
   {
-    "title": "To Pimp a Butterfly",
-    "artist": "Kendrick Lamar",
-    "genre": "Hip Hop",
-    "year": 2015,
-    "label": "Top Dawg Entertainment",
-    "condition": "Near Mint",
-    "price": 32.0,
-    "description": "Third studio album by American rapper Kendrick Lamar."
+    "id": 75,
+    "title": "The Best of David Bowie",
+    "artist": "David Bowie",
+    "genre": "Rock",
+    "year": 1980,
+    "label": "RCA",
+    "description": "A compilation of David Bowie's most influential tracks, showcasing his innovative career."
   },
   {
-    "title": "Ctrl",
-    "artist": "SZA",
-    "genre": "R&B",
-    "year": 2017,
-    "label": "Top Dawg Entertainment",
-    "condition": "Very Good",
-    "price": 29.0,
-    "description": "Debut studio album by American singer SZA."
+    "id": 76,
+    "title": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+    "artist": "David Bowie",
+    "genre": "Rock",
+    "year": 1972,
+    "label": "RCA",
+    "description": "David Bowie: 1972 concept album, featuring his iconic Ziggy Stardust persona."
   },
   {
-    "title": "Astroworld",
-    "artist": "Travis Scott",
-    "genre": "Hip Hop",
-    "year": 2018,
-    "label": "Cactus Jack",
-    "condition": "Good",
-    "price": 26.0,
-    "description": "Third studio album by American rapper Travis Scott."
+    "id": 77,
+    "title": "American Music Club",
+    "artist": "California",
+    "genre": "Alternative Rock",
+    "year": 1988,
+    "label": "Reprise",
+    "description": "American Music Club: 1988 album, praised for its introspective lyrics and alternative rock sound."
+  },
+  {
+    "id": 78,
+    "title": "Songs in the Key of Life",
+    "artist": "Stevie Wonder",
+    "genre": "Soul",
+    "year": 1976,
+    "label": "Tamla",
+    "description": "Stevie Wonder: 1976 double album, known for its rich musical arrangements and lyrical depth."
+  },
+  {
+    "id": 79,
+    "title": "The Clash",
+    "artist": "The Clash",
+    "genre": "Punk Rock",
+    "year": 1977,
+    "label": "CBS",
+    "description": "The Clash: 1977 debut, a seminal punk rock album with energetic tracks and political commentary."
+  },
+  {
+    "id": 80,
+    "title": "Electric Warrior",
+    "artist": "T. Rex",
+    "genre": "Glam Rock",
+    "year": 1971,
+    "label": "T. Rex",
+    "description": "T. Rex: 1971 album, known for its glam rock style and catchy, flamboyant songs."
+  },
+  {
+    "id": 81,
+    "title": "A Hard Day’s Night",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1964,
+    "label": "Parlophone",
+    "description": "The Beatles: 1964 album, featuring their early hits and a vibrant rock sound."
+  },
+  {
+    "id": 82,
+    "title": "Never Mind the Bollocks, Here’s the Sex Pistols",
+    "artist": "Sex Pistols",
+    "genre": "Punk Rock",
+    "year": 1977,
+    "label": "Virgin",
+    "description": "Sex Pistols: 1977 debut, a defining punk rock album with its raw energy and rebellious spirit."
+  },
+  {
+    "id": 83,
+    "title": "The Best of The Doors",
+    "artist": "The Doors",
+    "genre": "Rock",
+    "year": 1985,
+    "label": "Elektra",
+    "description": "A compilation of The Doors' greatest tracks, showcasing their distinctive rock sound."
+  },
+  {
+    "id": 84,
+    "title": "Back in Black",
+    "artist": "AC/DC",
+    "genre": "Rock",
+    "year": 1980,
+    "label": "Atlantic",
+    "description": "AC/DC: 1980 album, known for its high-energy rock sound and iconic riffs."
+  },
+  {
+    "id": 85,
+    "title": "The Essential Johnny Cash",
+    "artist": "Johnny Cash",
+    "genre": "Country",
+    "year": 2002,
+    "label": "Columbia",
+    "description": "A compilation album featuring Johnny Cash's most influential songs."
+  },
+  {
+    "id": 86,
+    "title": "Live at the Apollo",
+    "artist": "James Brown",
+    "genre": "Soul",
+    "year": 1963,
+    "label": "King",
+    "description": "James Brown: 1963 live album, capturing his electrifying stage presence and soul music impact."
+  },
+  {
+    "id": 87,
+    "title": "Blonde on Blonde",
+    "artist": "Bob Dylan",
+    "genre": "Folk Rock",
+    "year": 1966,
+    "label": "Columbia",
+    "description": "Dylan: 1966 double album, a pivotal release in folk rock with its poetic lyrics."
+  },
+  {
+    "id": 88,
+    "title": "Goodbye Yellow Brick Road",
+    "artist": "Elton John",
+    "genre": "Pop",
+    "year": 1973,
+    "label": "MCA",
+    "description": "Elton John: 1973 album, known for its elaborate production and wide-ranging pop hits."
+  },
+  {
+    "id": 89,
+    "title": "Legend",
+    "artist": "Bob Marley and the Wailers",
+    "genre": "Reggae",
+    "year": 1984,
+    "label": "Island",
+    "description": "A compilation of Bob Marley's greatest reggae tracks, featuring his revolutionary sound."
+  },
+  {
+    "id": 90,
+    "title": "Are You Experienced?",
+    "artist": "The Jimi Hendrix Experience",
+    "genre": "Rock",
+    "year": 1967,
+    "label": "Reprise",
+    "description": "Hendrix: 1967 debut, showcasing his groundbreaking guitar techniques and psychedelic style."
+  },
+  {
+    "id": 91,
+    "title": "Pet Sounds",
+    "artist": "The Beach Boys",
+    "genre": "Pop",
+    "year": 1966,
+    "label": "Capitol",
+    "description": "The Beach Boys: 1966 album, a revolutionary work in pop music with its intricate production."
+  },
+  {
+    "id": 92,
+    "title": "In the Court of the Crimson King",
+    "artist": "King Crimson",
+    "genre": "Progressive Rock",
+    "year": 1969,
+    "label": "Island",
+    "description": "King Crimson: 1969 debut, a landmark in progressive rock with its dark, complex sound."
+  },
+  {
+    "id": 93,
+    "title": "Songs of Innocence",
+    "artist": "U2",
+    "genre": "Rock",
+    "year": 2014,
+    "label": "Island",
+    "description": "U2: 2014 release, exploring themes of innocence with a polished, modern rock approach."
+  },
+  {
+    "id": 94,
+    "title": "Songs of Leonard Cohen",
+    "artist": "Leonard Cohen",
+    "genre": "Folk",
+    "year": 1967,
+    "label": "Columbia",
+    "description": "Leonard Cohen: debut album, known for its deep lyrical content and unique vocal style."
+  },
+  {
+    "id": 95,
+    "title": "Blonde on Blonde",
+    "artist": "Bob Dylan",
+    "genre": "Folk Rock",
+    "year": 1966,
+    "label": "Columbia",
+    "description": "A seminal folk rock album by Dylan, known for its complex lyrics and innovative sound."
+  },
+  {
+    "id": 96,
+    "title": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+    "artist": "David Bowie",
+    "genre": "Rock",
+    "year": 1972,
+    "label": "RCA",
+    "description": "Bowie: 1972 concept album, featuring his iconic Ziggy Stardust persona."
+  },
+  {
+    "id": 97,
+    "title": "Songs in the Key of Life",
+    "artist": "Stevie Wonder",
+    "genre": "Soul",
+    "year": 1976,
+    "label": "Tamla",
+    "description": "Wonder: 1976 double album, celebrated for its rich musicality and depth."
+  },
+  {
+    "id": 98,
+    "title": "Live at Leeds",
+    "artist": "The Who",
+    "genre": "Rock",
+    "year": 1970,
+    "label": "Track",
+    "description": "The Who: 1970 live recording, capturing their powerful stage presence and rock energy."
+  },
+  {
+    "id": 99,
+    "title": "A Hard Day’s Night",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1964,
+    "label": "Parlophone",
+    "description": "The Beatles: 1964 album, featuring some of their earliest and most beloved rock hits."
+  },
+  {
+    "id": 100,
+    "title": "Exile on Main St.",
+    "artist": "The Rolling Stones",
+    "genre": "Rock",
+    "year": 1972,
+    "label": "Rolling Stones",
+    "description": "The Rolling Stones: influential 1972 album, noted for its raw, diverse rock sound."
+  },
+  {
+    "id": 101,
+    "title": "The Clash",
+    "artist": "The Clash",
+    "genre": "Punk Rock",
+    "year": 1977,
+    "label": "CBS",
+    "description": "The Clash: debut album, a key release in punk rock with its energetic and political edge."
+  },
+  {
+    "id": 102,
+    "title": "Blonde on Blonde",
+    "artist": "Bob Dylan",
+    "genre": "Folk Rock",
+    "year": 1966,
+    "label": "Columbia",
+    "description": "Dylan: 1966 album, a major work in folk rock with its poetic depth and musical innovation."
   }
 ]
