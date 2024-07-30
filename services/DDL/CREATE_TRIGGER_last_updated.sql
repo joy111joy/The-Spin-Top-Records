@@ -16,3 +16,5 @@ $BODY$;
 
 ALTER FUNCTION public.last_updated()
     OWNER TO postgres;
+
+
