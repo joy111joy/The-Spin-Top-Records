@@ -4,7 +4,7 @@ const dal = require("./m.db");
 async function getLogins() {
   try {
     await dal.connect();
-    const cursor = dal.db("Auth").collection("logins").find();
+    const cursor = dal.db("SpinTop").collection("logins").find();
     const results = await cursor.toArray();
     return results;
   } catch (error) {
@@ -15,7 +15,7 @@ async function getLoginByUsername(name) {
   try {
     await dal.connect();
     const result = dal
-      .db("Auth")
+      .db("SpinTop")
       .collection("logins")
       .findOne({ username: name });
     return result;
@@ -27,7 +27,7 @@ async function getLoginByEmail(email) {
   try {
     await dal.connect();
     const result = dal
-      .db("Auth")
+      .db("SpinTop")
       .collection("logins")
       .findOne({ email: email });
     return result;
@@ -39,7 +39,7 @@ async function getLoginById(id) {
   try {
     await dal.connect();
     const result = dal
-      .db("Auth")
+      .db("SpinTop")
       .collection("logins")
       .findOne({ _id: new ObjectId(id) });
     return result;
@@ -60,7 +60,7 @@ async function addLogin(name, email, password, uuidv4) {
   try {
     await dal.connect();
     const result = await dal
-      .db("Auth")
+      .db("SpinTop")
       .collection("logins")
       .insertOne(newLogin);
     return result.insertedId;
