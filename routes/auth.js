@@ -1,12 +1,12 @@
-const express = require("express");
+//const express = require("express");
 const bcrypt = require("bcrypt");
 const uuid = require("uuid");
 const jwt = require("jsonwebtoken");
-const router = express.Router();
+let router = require("express").Router();
 const myEventEmitter = require("../services/logEvents.js");
 
-//const { addLogin, getLoginByUsername } = require("../services/p.auth.dal");
-//const { addLogin, getLoginByUsername } = require("../services/m.auth.dal");
+const pDal = require("../../services/p.auth.dal");
+const mDal = require("../../services/m.auth.dal");
 
 router.get("/", async (req, res) => {
   if (DEBUG) console.log("login page: ");

@@ -1,6 +1,7 @@
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
+
 const express = require("express");
 const app = express();
 const session = require("express-session");
@@ -12,7 +13,8 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret:
+      process.env.SESSION_SECRET || " kstoyles@cluster0.ufay3sq.mongodb.net",
     resave: false,
     saveUninitialized: false,
   })
