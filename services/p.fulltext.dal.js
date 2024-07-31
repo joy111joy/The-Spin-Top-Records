@@ -1,15 +1,19 @@
-const dal = require("./dvdrental_db");
+const dal = require("./Spin-Top-records.db");
 
 var getFullText = function (text) {
   if (DEBUG) console.log("postgres.dal.getFullText()");
   return new Promise(function (resolve, reject) {
-    const sql = `SELECT title, description FROM film \
-        WHERE description iLIKE '%'||$1||'%' \
-        OR title iLIKE '%'||$1||'%'`;
+    const query = `
+    SELECT * FROM public.records, public.records_fulltext
+    WHERE 'title' iLIKE $1
+       OR 'artist' ILIKE $1
+       OR 'genre' ILIKE $1
+       OR 'label' ILIKE $1
+       OR 'description' ILIKE $1`;
+
     if (DEBUG) console.log(sql);
     dal.query(sql, [text], (err, result) => {
       if (err) {
-        // logging should go here
         if (DEBUG) console.log(err);
         reject(err);
       } else {
