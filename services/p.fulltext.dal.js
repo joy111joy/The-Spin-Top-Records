@@ -1,9 +1,9 @@
-const dal = require("./Spin-Top-records.db");
+const dal = require("./SpinTop".db);
 
-var getFullText = function (text) {
+let getFullText = function (text) {
   if (DEBUG) console.log("postgres.dal.getFullText()");
   return new Promise(function (resolve, reject) {
-    const query = `
+    const theResults2 = `
     SELECT * FROM public.records, public.records_fulltext
     WHERE 'title' iLIKE $1
        OR 'artist' ILIKE $1

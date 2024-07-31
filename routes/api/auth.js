@@ -1,8 +1,8 @@
 const bcrypt = require("bcrypt");
 const uuid = require("uuid");
-var router = require("express").Router();
+let router = require("express").Router();
 const dal = require("../../services/p.auth.dal");
-// const dal = require('../../services/m.auth.dal')
+const dal = require("../../services/m.auth.dal");
 
 // api/auth/:id
 // fetch the specific login by id
@@ -66,12 +66,5 @@ router.delete("/:id", async (req, res) => {
     res.json({ message: "Service Unavailable", status: 503 });
   }
 });
-// // list the active api routes
-// if(DEBUG) {
-//     router.stack.forEach(function(r){
-//         if (r.route && r.route.path){
-//         console.log(r.route.path)
-//         }
-//     });
-// }
+
 module.exports = router;
