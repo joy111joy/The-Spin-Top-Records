@@ -41,7 +41,7 @@ app.get("/", async (req, res) => {
   );
   res.render("index", { status: req.session.status });
 });
-
+//hi
 app.get("/about", async (req, res) => {
   myEventEmitter.emit(
     "event",
