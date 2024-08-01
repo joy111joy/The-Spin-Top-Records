@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { setToken, authenticateJWT } = require("./auth");
+const { setToken, authenticateJWT } = require("../auth");
 const myEventEmitter = require("../services/logEvents.js");
 
 const pDal = require("../../services/p.fulltext.dal");

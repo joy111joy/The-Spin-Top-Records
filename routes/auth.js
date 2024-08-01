@@ -59,4 +59,15 @@ router.post(
   }
 );
 
+// Middleware functions
+function setToken(req, res, next) {
+  // Middleware logic here
+  next();
+}
+
+function authenticateJWT(req, res, next) {
+  // Middleware logic here
+  next();
+}
+
 module.exports = router;
