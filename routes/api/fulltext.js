@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const { setToken, authenticateJWT } = require("../services/auth");
+const { setToken, authenticateJWT } = require("./auth");
 const myEventEmitter = require("../services/logEvents.js");
 
-const pDal = require("../services/p.fulltext.dal");
-const mDal = require("../services/m.fulltext.dal");
+const pDal = require("../../services/p.fulltext.dal");
+const mDal = require("../../services/m.fulltext.dal");
 
 // Use the setToken middleware to set the JWT token from the session
 router.use(setToken);

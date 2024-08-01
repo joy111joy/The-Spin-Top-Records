@@ -1,70 +1,62 @@
-const bcrypt = require("bcrypt");
-const uuid = require("uuid");
-let router = require("express").Router();
-const dal = require("../../services/p.auth.dal");
-const dal = require("../../services/m.auth.dal");
+const express = require("express");
+const router = express.Router();
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const config = require("config");
+const { check, validationResult } = require("express-validator");
+const pDal = require("../../services/p.auth.dal");
+const mDal = require("../../services/m.auth.dal");
 
-// api/auth/:id
-// fetch the specific login by id
-router.get("/:id", async (req, res) => {
-  if (DEBUG) console.log("ROUTE: /api/auth/:id GET " + req.url);
-  try {
-    let aLogin = await dal.getLoginById(req.params.id);
-    if (aLogin.length === 0) {
-      // log this error to an error log file.
-      res.statusCode = 404;
-      res.json({ message: "Not Found", status: 404 });
-    } else res.json(aLogin);
-  } catch {
-    // log this error to an error log file.
-    res.statusCode = 503;
-    res.json({ message: "Service Unavailable", status: 503 });
-  }
-});
-// reset the password
-router.patch("/:id", async (req, res) => {
-  if (DEBUG) console.log("ROUTE: /api/auth PATCH " + req.params.id);
-  try {
-    let aLogin = await dal.getLoginById(req.params.id);
-    if (aLogin.length === 0) {
-      // log this error to an error log file.
-      res.statusCode = 404;
-      res.json({ message: "Not Found", status: 404 });
-    } else {
-      try {
-        const hashedPassword = await bcrypt.hash(req.body.password, 10);
-        await dal.patchLogin(
-          req.params.id,
-          aLogin.username,
-          hashedPassword,
-          aLogin.email
-        );
-        res.statusCode = 200;
-        res.json({ message: "OK", status: 200 });
-      } catch (error) {
-        // log this error to an error log file.
-        res.statusCode = 500;
-        res.json({ message: "Internal Server Error", status: 500 });
-      }
+// @route    POST api/auth
+// @desc     Authenticate user & get token
+// @access   Public
+router.post(
+  "/",
+  [
+    check("email", "Please include a valid email").isEmail(),
+    check("password", "Password is required").exists(),
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
     }
-  } catch {
-    // log this error to an error log file.
-    res.statusCode = 503;
-    res.json({ message: "Service Unavailable", status: 503 });
+
+    const { email, password } = req.body;
+
+    try {
+      let user = await pDal.findUserByEmail(email);
+
+      if (!user) {
+        return res.status(400).json({ errors: [{ msg: "Invalid Credentials" }] });
+      }
+
+      const isMatch = await bcrypt.compare(password, user.password);
+
+      if (!isMatch) {
+        return res.status(400).json({ errors: [{ msg: "Invalid Credentials" }] });
+      }
+
+      const payload = {
+        user: {
+          id: user.id,
+        },
+      };
+
+      jwt.sign(
+        payload,
+        config.get("jwtSecret"),
+        { expiresIn: 360000 },
+        (err, token) => {
+          if (err) throw err;
+          res.json({ token });
+        }
+      );
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send("Server error");
+    }
   }
-});
-// delete the login
-router.delete("/:id", async (req, res) => {
-  if (DEBUG) console.log("ROUTE: /api/auth DELETE " + req.params.id);
-  try {
-    await dal.deleteLogin(req.params.id);
-    res.statusCode = 200;
-    res.json({ message: "OK", status: 200 });
-  } catch {
-    // log this error to an error log file.
-    res.statusCode = 503;
-    res.json({ message: "Service Unavailable", status: 503 });
-  }
-});
+);
 
 module.exports = router;
