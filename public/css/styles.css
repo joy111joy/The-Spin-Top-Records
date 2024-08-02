@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+}
+ 
+header {
+    padding: 30px;
+    background-color: #141414;
+    color: white;
+    font-family: Raleway;
+    display: flex;
+    justify-content: space-between;
+}
+ 
+nav {
+    width: 50%;
+    display: flex;
+    list-style: none;
+}
+ 
+nav a {
+    margin-right: 70px;
+    font-size: 2vw;
+    padding-left: 30px;
+}
+ 
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 2vw;
+    font-weight: 600;
+}
+ 
+#Banner {
+    position: relative;
+    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width of the viewport */
+    overflow: hidden; /* Hide overflow if the image exceeds the container */
+  }
+  
+  #Banner img {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire container without distortion */
+  }
+ 
+
+#Banner h2 {
+    position: absolute;
+    z-index: 1; /* Ensure the text and form appear above the image */
+    top: 20%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 60px;
+    font-family: Raleway;
+}
+ 
+#Search {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: large;
+}
+ 
+#Search::placeholder {
+    font-size: large;
+}
+ 
+#Content {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: -400px;
+    background-color:  rgb(28, 28, 28, 0.8);
+    color: white;
+    font-family: Raleway;
+}
+#Content h2 {
+    font-size: 25pt;
+}
+ 
+#Results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+ 
+.Vinyl {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    perspective: 1000px; /* Needed for 3D effect */
+    transition: transform 0.6s; /* Smooth transition for scaling */
+}
+.Vinyl h3 {
+    font-size: 20pt;
+    margin-top: 20px;
+    text-align: center;
+}
+.Vinyl p {
+    font-size: 14pt;
+    margin-top: -20px;
+    text-align: center;
+}
+ 
+.Vinyl-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s; /* Smooth transition for flipping */
+    transform-style: preserve-3d; /* Needed for 3D effect */
+    position: relative;
+}
+ 
+.Vinyl-front, .Vinyl-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back side when flipped */
+}
+ 
+.Vinyl-front {
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8)); /* Placeholder gradient */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background 1s; /* Smooth gradient transition */
+}
+ 
+.Vinyl-back {
+    background: #333; /* Background color for the back side */
+    color: white;
+    border-radius: 20px;
+    transform: rotateY(180deg); /* Initially hidden behind the front */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+ 
+.Vinyl.expanded .Vinyl-inner {
+    transform: rotateY(180deg); /* Flip the card when expanded */
+}
+ 
+.Vinyl.expanded {
+    transform: scale(1.2); /* Scale the card when expanded */
+    z-index: 1; /* Ensure the expanded card appears above the others */
+}
+.Vinyl.expanded .Vinyl-front {
+    transition: none; /* Keep the original gradient when flipped */
+}
+
+@media screen and (max-width: 1070px){
+    .Vinyl {
+        width: 200px;
+        height: 200px;
+    }
+    
+}

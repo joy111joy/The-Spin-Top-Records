@@ -1,5 +1,7 @@
 var router = require("express").Router();
-const { setToken, authenticateJWT } = require("../../services/auth");
+const { setToken, authenticateJWT } = require("../../middlewares/auth");
+
+const DEBUG = process.env.DEBUG || false;
 
 if (DEBUG) {
   console.log("ROUTE: /api/auth");
@@ -12,12 +14,8 @@ router.use(setToken);
 // Protect all API routes with the authenticateJWT middleware
 router.use(authenticateJWT);
 
-// http://localhost:3000/api/auth/
-const authRouter = require("./auth");
+// Ensure you have the correct path and export
+const authRouter = require("../auth");
 router.use("/auth", authRouter);
-
-// http://localhost:3000/api/full/
-const fulltextRouter = require("./fulltext");
-router.use("/full", fulltextRouter);
 
 module.exports = router;

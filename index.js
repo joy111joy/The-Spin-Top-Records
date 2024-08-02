@@ -5,6 +5,11 @@ if (process.env.NODE_ENV !== "production") {
 const express = require("express");
 const app = express();
 const session = require("express-session");
+const apiRouter = require("./routes/api/index");
+const myEventEmitter = require("./services/logEvents.js");
+
+app.use("/api", apiRouter);
+
 const PORT = process.env.PORT || 3000;
 global.DEBUG = true;
 
@@ -19,7 +24,6 @@ app.use(
     saveUninitialized: false,
   })
 );
-const myEventEmitter = require("./services/logEvents.js");
 
 app.listen(PORT, (err) => {
   if (err) console.log(err);
@@ -41,7 +45,7 @@ app.get("/", async (req, res) => {
   );
   res.render("index", { status: req.session.status });
 });
-//hi
+
 app.get("/about", async (req, res) => {
   myEventEmitter.emit(
     "event",
@@ -58,10 +62,8 @@ app.use("/search", searchRouter);
 const authRouter = require("./routes/auth");
 app.use("/auth", authRouter);
 
-//  anything beginning with "/api" will go into this
-const apiRouter = require("./routes/api");
-app.use("/api", apiRouter);
-
 app.use((req, res) => {
   res.status(404).render("404", { status: req.session.status });
 });
+
+module.exports = app;
