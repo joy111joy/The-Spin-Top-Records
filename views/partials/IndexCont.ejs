@@ -1,0 +1,152 @@
+<section id="Content">
+    <h2>Results:</h2>
+
+    <div id="Results">
+        <div class="Vinyl">
+            <div class="Vinyl-inner">
+                <div class="Vinyl-front">
+                    <h3>The Dark Side of the Moon</h3>
+                    <p>Pink Floyd</p>
+                    <button>Add to Spin-List</button>
+                </div>
+                <div class="Vinyl-back">
+                    <h3>The Dark Side of the Moon</h3>
+                    <p>Pink Floyd's 1973 masterpiece, a concept album known for its innovative sound and deep philosophical themes.</p>
+                </div>
+            </div>
+        </div>            
+        
+        <div class="Vinyl">
+            <div class="Vinyl-inner">
+                <div class="Vinyl-front">
+                    <h3>Thriller</h3>
+                    <p>Michael Jackson</p>
+                    <button>Add to Spin-List</button>
+                </div>
+                <div class="Vinyl-back">
+                    <h3>Thriller</h3>
+                    <p>Michael Jackson's 1982 album, a record-breaking classic known for its iconic tracks and groundbreaking music videos.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="Vinyl">
+            <div class="Vinyl-inner">
+                <div class="Vinyl-front">
+                    <h3>Nevermind</h3>
+                    <p>Nirvana</p>
+                    <button>Add to Spin-List</button>
+                </div>
+                <div class="Vinyl-back">
+                    <h3>Nevermind</h3>
+                    <p>Nirvana's 1991 album that defined a generation with its raw sound and became a landmark in grunge music.</p>
+                </div>
+            </div>
+        </div>            
+        
+        <div class="Vinyl">
+            <div class="Vinyl-inner">
+                <div class="Vinyl-front">
+                    <h3>Rumours</h3>
+                    <p>Fleetwood Mac</p>
+                    <button>Add to Spin-List</button>
+                </div>
+                <div class="Vinyl-back">
+                    <h3>Rumours</h3>
+                    <p>Fleetwood Mac's 1977 album, a quintessential rock record featuring a blend of pop, rock, and emotional lyrics.</p>
+                </div>
+            </div>
+        </div>            
+        
+        <div class="Vinyl">
+            <div class="Vinyl-inner">
+                <div class="Vinyl-front">
+                    <h3>Back in Black</h3>
+                    <p>AC/DC</p>
+                    <button>Add to Spin-List</button>
+                </div>
+                <div class="Vinyl-back">
+                    <h3>Back in Black</h3>
+                    <p>AC/DC's 1980 album, known for its electrifying rock sound and one of the best-selling albums of all time.</p>
+                </div>
+            </div>
+        </div>            
+        
+        <div class="Vinyl">
+            <div class="Vinyl-inner">
+                <div class="Vinyl-front">
+                    <h3>OK Computer</h3>
+                    <p>Radiohead</p>
+                    <button>Add to Spin-List</button>
+                </div>
+                <div class="Vinyl-back">
+                    <h3>OK Computer</h3>
+                    <p>Radiohead's 1997 album, renowned for its complex soundscapes and exploration of technology and alienation.</p>
+                </div>
+            </div>
+        </div>            
+        
+        <div class="Vinyl">
+            <div class="Vinyl-inner">
+                <div class="Vinyl-front">
+                    <h3>Hotel California</h3>
+                    <p>The Eagles</p>
+                    <button>Add to Spin-List</button>
+                </div>
+                <div class="Vinyl-back">
+                    <h3>Hotel California</h3>
+                    <p>The Eagles' 1976 album, a rock classic famous for its intricate guitar solos and reflective lyrics.</p>
+                </div>
+            </div>
+        </div>
+</section>
+
+<footer></footer>
+
+<script>
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function applyRandomGradient(element) {
+        const color1 = getRandomColor();
+        const color2 = getRandomColor();
+        const vinylFront = element.querySelector('.Vinyl-front');
+        vinylFront.style.background = `linear-gradient(to bottom right, ${color1}, ${color2})`;
+    }
+
+    function toggleVinyl() {
+        const vinylElement = this;
+        const vinylInner = vinylElement.querySelector('.Vinyl-inner');
+
+        if (vinylElement.classList.contains('expanded')) {
+            // Return to original size
+            vinylElement.classList.remove('expanded');
+            vinylInner.classList.remove('flipped');
+        } else {
+            // Expand and center the vinyl
+            vinylElement.classList.add('expanded');
+            vinylInner.classList.add('flipped');
+        }
+    }
+
+    function setupVinylClickHandlers() {
+        const vinylElements = document.getElementsByClassName('Vinyl');
+        for (let i = 0; i < vinylElements.length; i++) {
+            const vinyl = vinylElements[i];
+            // Apply random gradient to each vinyl on page load
+            applyRandomGradient(vinyl);
+
+            // Add click event listener to toggle size
+            vinyl.addEventListener('click', toggleVinyl);
+        }
+    }
+
+    // Set up click handlers and apply gradients when the page loads
+    window.onload = setupVinylClickHandlers;
+</script>
