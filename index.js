@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   session({
     secret:
-      process.env.SESSION_SECRET || " kstoyles@cluster0.ufay3sq.mongodb.net",
+      process.env.SESSION_SECRET || "kstoyles@cluster0.ufay3sq.mongodb.net",
     resave: false,
     saveUninitialized: false,
   })
@@ -43,7 +43,11 @@ app.get("/", async (req, res) => {
     "INFO",
     "landing page (index.ejs) was displayed."
   );
-  res.render("index", { status: req.session.status });
+  const user = req.session.user;
+  res.render("index", { 
+    user: user ? user.username : 'Guest',
+    status: req.session.status
+  });
 });
 
 app.get("/about", async (req, res) => {

@@ -1,50 +1,49 @@
+// m.auth.dal.js
 const { ObjectId } = require("mongodb");
 const dal = require("./m.db");
 
 async function getLogins() {
   try {
-    await dal.connect();
-    const cursor = dal.db("SpinTop").collection("logins").find();
+    const db = await dal.connect();
+    const cursor = db.collection("logins").find();
     const results = await cursor.toArray();
     return results;
   } catch (error) {
-    console.log(error);
+    console.error("Error in getLogins:", error);
+    throw error; // Re-throw to handle higher up if needed
   }
 }
+
 async function getLoginByUsername(name) {
   try {
-    await dal.connect();
-    const result = dal
-      .db("SpinTop")
-      .collection("logins")
-      .findOne({ username: name });
+    const db = await dal.connect();
+    const result = await db.collection("logins").findOne({ username: name });
     return result;
   } catch (error) {
-    console.log(error);
+    console.error("Error in getLoginByUsername:", error);
+    throw error; // Re-throw to handle higher up if needed
   }
 }
+
 async function getLoginByEmail(email) {
   try {
-    await dal.connect();
-    const result = dal
-      .db("SpinTop")
-      .collection("logins")
-      .findOne({ email: email });
+    const db = await dal.connect();
+    const result = await db.collection("logins").findOne({ email: email });
     return result;
   } catch (error) {
-    console.log(error);
+    console.error("Error in getLoginByEmail:", error);
+    throw error; // Re-throw to handle higher up if needed
   }
 }
+
 async function getLoginById(id) {
   try {
-    await dal.connect();
-    const result = dal
-      .db("SpinTop")
-      .collection("logins")
-      .findOne({ _id: new ObjectId(id) });
+    const db = await dal.connect();
+    const result = await db.collection("logins").findOne({ _id: new ObjectId(id) });
     return result;
   } catch (error) {
-    console.log(error);
+    console.error("Error in getLoginById:", error);
+    throw error; // Re-throw to handle higher up if needed
   }
 }
 
@@ -58,17 +57,21 @@ async function addLogin(name, email, password, uuidv4) {
   };
 
   try {
-    await dal.connect();
-    const result = await dal
-      .db("SpinTop")
-      .collection("logins")
-      .insertOne(newLogin);
+    const db = await dal.connect();
+    const result = await db.collection("logins").insertOne(newLogin);
     return result.insertedId;
   } catch (error) {
-    if (error.code === 11000) return error;
-    console.log(error);
+    if (error.code === 11000) {
+      console.error("Duplicate key error:", error);
+      return error;
+    }
+    console.error("Error in addLogin:", error);
+    throw error; // Re-throw to handle higher up if needed
   }
 }
+
+// You can remove this line or place it in a test script if needed
+getLogins()
 
 module.exports = {
   getLogins,

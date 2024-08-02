@@ -5,8 +5,8 @@ const jwt = require('jsonwebtoken');
 const router = express.Router();
 const myEventEmitter = require('../services/logEvents.js');
 
-const { addLogin, getLoginByUsername } = require('../services/p.auth.dal')
-// const { addLogin, getLoginByUsername } = require('../services/m.auth.dal')
+// const { addLogin, getLoginByUsername } = require('../services/p.auth.dal')
+const { addLogin, getLoginByUsername } = require('../services/m.auth.dal')
 
 router.get('/', async (req, res) => {
     if(DEBUG) console.log('login page: ');
@@ -18,6 +18,7 @@ router.post('/', async (req, res) => {
     try {
         if(DEBUG) console.log('auth.getLoginByUsername().try');
         let user = await getLoginByUsername(req.body.username);
+        console.log(user);
         if(user === undefined || user === null) {
             req.session.status = 'Incorrect user name was entered.'
             if(DEBUG) console.log(req.session.status);
@@ -25,7 +26,9 @@ router.post('/', async (req, res) => {
             return;
         }
         if(DEBUG) console.log(`user data: ${user.username}`);
-        if( await bcrypt.compare(req.body.password, user.password)) {
+        const hashedPassword = await bcrypt.hash(user.password, 10);
+        if( await bcrypt.compare(req.body.password, hashedPassword)) {
+          console.log("Check One")
             const token = jwt.sign({ username: user.username }, process.env.JWT_SECRET, { expiresIn: '10m' });
             if(DEBUG) {
                 console.log('\n');
@@ -43,6 +46,8 @@ router.post('/', async (req, res) => {
         } else {
             myEventEmitter.emit('event', 'auth.post', 'INVALID', `Incorrect password was entered.`);
             req.session.status = 'Incorrect password was entered.'
+            console.log(user.password);
+            console.log(req.body.password);
             res.redirect('/auth')
             return;
         }
