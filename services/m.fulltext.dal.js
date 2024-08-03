@@ -4,8 +4,7 @@ const dal = require("./m.db");
 async function getFullText(fulltext) {
   if (DEBUG) console.log("mongo.dal.getFullText()");
   try {
-    await dal.connect();
-    const database = dal.db("SpinTop");
+    const database = dal.connect();
     const collection = database.collection("records");
     const result = await collection
       .find({ $text: { $search: fulltext } })
@@ -15,7 +14,8 @@ async function getFullText(fulltext) {
     console.error("Error occurred while connecting to MongoDB:", err);
     throw err;
   } finally {
-    dal.close();
+    await dal.close();
+    close();
   }
 }
 

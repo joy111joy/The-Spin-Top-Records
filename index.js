@@ -3,10 +3,12 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const express = require("express");
+const bcrypt = require("bcryptjs");
 const app = express();
 const session = require("express-session");
 const apiRouter = require("./routes/api/index");
 const myEventEmitter = require("./services/logEvents.js");
+const db = require("./services/m.db"); // Assuming MongoDB is used
 
 app.use("/api", apiRouter);
 
@@ -44,9 +46,9 @@ app.get("/", async (req, res) => {
     "landing page (index.ejs) was displayed."
   );
   const user = req.session.user;
-  res.render("index", { 
-    user: user ? user.username : 'Guest',
-    status: req.session.status
+  res.render("index", {
+    user: user ? user.username : "Guest",
+    status: req.session.status,
   });
 });
 

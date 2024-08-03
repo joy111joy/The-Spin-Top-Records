@@ -21,16 +21,21 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  let theResults1 = await mDal.getFullText(req.body.keyword);
-  let theResults2 = await pDal.getFullText(req.body.keyword);
-  const theResults = [...theResults1, ...theResults2];
-  myEventEmitter.emit(
-    "event",
-    "app.post /search",
-    "INFO",
-    "search page (search.ejs) was displayed."
-  );
-  res.render("search", { status: req.session.status, theResults });
+  try {
+    let theResults1 = await mDal.getFullText(req.body.keyword);
+    let theResults2 = await pDal.getFullText(req.body.keyword);
+    const theResults = [...theResults1, ...theResults2];
+    myEventEmitter.emit(
+      "event",
+      "app.post /search",
+      "INFO",
+      "search page (search.ejs) was displayed."
+    );
+    res.render("search", { status: req.session.status, theResults });
+  } catch (error) {
+    console.error("Error during search:", error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 module.exports = router;
