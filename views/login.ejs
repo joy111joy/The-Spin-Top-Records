@@ -1,19 +1,28 @@
 <html lang="en">
-    <%- include('./partials/header.ejs') %>
+	<%- include('./partials/headInfo.ejs') %>
     <body>
+		<%- include('./partials/header.ejs') %>
+		<img src="/images/surya-urs-8YZe_V0Bn_o-unsplash.jpg" alt="" id="LoginImg">
+
+		<section class="LoginCont">
+
 		<div class="login">
+			<a href="/auth/exit" class="Exit">&lt; Back </a>
+
 			<h1>Login</h1>
 			<form action="/auth" method="post">
 				<label for="username"></label>
 				<input type="text" name="username" placeholder="Username" id="username" required></br>
 				<label for="password"></label>
 				<input type="password" name="password" placeholder="Password" id="password" required></br>
-				<input type="submit" value="Login">
+				<input type="submit" value="Login" class="Submit">
 			</form>
+			<%- include('./partials/auth.ejs') %>
+
         </div>
 		<%- include('./partials/status.ejs') %>
 		</br>
-        <%- include('./partials/auth.ejs') %>
+		</section>
     </body>
     <%- include('./partials/footer.ejs') %>
 </html>
