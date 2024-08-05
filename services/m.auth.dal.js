@@ -77,9 +77,26 @@ async function addLogin(name, email, password, uuidv4) {
   }
 }
 
+async function getRecords() {
+  try {
+    console.log("Connecting to database...");
+    const db = await dal.connect();
+    console.log("Connected to database");
 
+    console.log("Fetching Records...");
+    const cursor = db.collection("Records").find();
+    const results = await cursor.toArray();
+
+    console.log("Records fetched");
+    return results;
+  } catch (error) {
+    console.error("Error in getRecords:", error);
+    throw error; // Ensure you re-throw or handle errors properly
+  }
+}
 
 module.exports = {
+  getRecords,
   getLogins,
   getLoginByUsername,
   addLogin,
