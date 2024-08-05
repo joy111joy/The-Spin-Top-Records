@@ -49,8 +49,8 @@ app.get("/", async (req, res) => {
   const query = req.query.query || "";
 
   try {
-    let records;
-    if (query) {
+    let records = [];
+    if (user && query) {
       const db = await dal.connect();
       records = await db.collection("Records").find({
         $or: [
@@ -62,7 +62,7 @@ app.get("/", async (req, res) => {
           { genre: { $regex: query, $options: 'i' } }
         ]
       }).toArray();
-    } else {
+    } else if (user) {
       records = await getRecords();
     }
 
