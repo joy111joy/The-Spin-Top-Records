@@ -1,9 +1,8 @@
-// m.db.js
 const { MongoClient } = require("mongodb");
 require("dotenv").config();
 
-const url = process.env.MDBLOCAL; // MongoDB server URL
-const dbName = process.env.DBNAME; // Database name
+const url = process.env.MDBLOCAL;
+const dbName = process.env.DBNAME;
 let client;
 
 async function connect() {

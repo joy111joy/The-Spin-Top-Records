@@ -1,4 +1,3 @@
-// m.auth.dal.js
 const { ObjectId } = require("mongodb");
 const dal = require("./m.db");
 
@@ -16,7 +15,7 @@ async function getLogins() {
     return results;
   } catch (error) {
     console.error("Error in getLogins:", error);
-    throw error; // Ensure you re-throw or handle errors properly
+    throw error;
   }
 }
 
@@ -28,7 +27,7 @@ async function getLoginByUsername(name) {
     return result;
   } catch (error) {
     console.error("Error in getLoginByUsername:", error);
-    throw error; // Re-throw to handle higher up if needed
+    throw error;
   }
 }
 
@@ -39,7 +38,7 @@ async function getLoginByEmail(email) {
     return result;
   } catch (error) {
     console.error("Error in getLoginByEmail:", error);
-    throw error; // Re-throw to handle higher up if needed
+    throw error;
   }
 }
 
@@ -50,7 +49,7 @@ async function getLoginById(id) {
     return result;
   } catch (error) {
     console.error("Error in getLoginById:", error);
-    throw error; // Re-throw to handle higher up if needed
+    throw error;
   }
 }
 
@@ -73,7 +72,7 @@ async function addLogin(name, email, password, uuidv4) {
       return error;
     }
     console.error("Error in addLogin:", error);
-    throw error; // Re-throw to handle higher up if needed
+    throw error;
   }
 }
 
@@ -91,7 +90,7 @@ async function getRecords() {
     return results;
   } catch (error) {
     console.error("Error in getRecords:", error);
-    throw error; // Ensure you re-throw or handle errors properly
+    throw error;
   }
 }
 
