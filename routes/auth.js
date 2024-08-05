@@ -6,7 +6,9 @@ const router = express.Router();
 const myEventEmitter = require('../services/logEvents.js');
 
 // const { addLogin, getLoginByUsername } = require('../services/p.auth.dal')
-const { addLogin, getLoginByUsername } = require('../services/m.auth.dal')
+const { addLogin, getLoginByUsername, getRecords } = require('../services/m.auth.dal')
+
+let records = getRecords();
 
 router.get('/', async (req, res) => {
     if(DEBUG) console.log('login page: ');

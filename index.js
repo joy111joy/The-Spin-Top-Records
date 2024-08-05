@@ -7,6 +7,8 @@ const app = express();
 const session = require("express-session");
 const apiRouter = require("./routes/api/index");
 const myEventEmitter = require("./services/logEvents.js");
+const { getRecords } = require('./services/m.auth.dal');
+const dal = require('./services/m.db');
 
 app.use("/api", apiRouter);
 
@@ -44,10 +46,35 @@ app.get("/", async (req, res) => {
     "landing page (index.ejs) was displayed."
   );
   const user = req.session.user;
-  res.render("index", { 
-    user: user ? user.username : 'Guest',
-    status: req.session.status
-  });
+  const query = req.query.query || "";
+
+  try {
+    let records = [];
+    if (user && query) {
+      const db = await dal.connect();
+      records = await db.collection("Records").find({
+        $or: [
+          { title: { $regex: query, $options: 'i' } },
+          { artist: { $regex: query, $options: 'i' } },
+          { description: { $regex: query, $options: 'i' } },
+          { year: { $regex: query, $options: 'i' } },
+          { label: { $regex: query, $options: 'i' } },
+          { genre: { $regex: query, $options: 'i' } }
+        ]
+      }).toArray();
+    } else if (user) {
+      records = await getRecords();
+    }
+
+    res.render("index", { 
+      user: user ? user.username : 'Guest',
+      records: records,
+      status: req.session.status
+    });
+  } catch (error) {
+    console.error("Error fetching records:", error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.get("/about", async (req, res) => {
