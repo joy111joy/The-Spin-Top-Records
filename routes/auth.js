@@ -26,7 +26,6 @@ router.post('/', async (req, res) => {
             return;
         }
         if(DEBUG) console.log(`user data: ${user.username}`);
-        // const hashedPassword = await bcrypt.hash(user.password, 10);
         if( await bcrypt.compare(req.body.password, user.password) ) {
           console.log("Check One")
             const token = jwt.sign({ username: user.username }, process.env.JWT_SECRET, { expiresIn: '10m' });
