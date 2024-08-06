@@ -73,6 +73,14 @@ a {
     font-size: 60px;
     font-family: Raleway;
 }
+
+a#SearchLogin{
+  z-index: 1;
+  color: white;
+  font-size: 60px;
+  font-family: Raleway;
+  text-decoration: underline;
+}
  
 #Search {
     position: absolute;

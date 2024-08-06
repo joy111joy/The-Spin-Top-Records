@@ -1,7 +1,12 @@
 <section id="Banner">
     <img src="/images/surya-urs-8YZe_V0Bn_o-unsplash.jpg" alt="">
     <h2>Looking for a Vinyl?</h2>
-    <form action="">
-        <input type="text" placeholder="Search For Vinyls" id="Search">            
-    </form>
+    <% if (user && user !== 'Guest') { %>
+        <form action="/" method="get">
+            <input type="text" placeholder="Search For Vinyls" id="Search" name="query">
+            <button type="submit">Search</button>
+        </form>
+    <% } else { %>
+        <h2><br><br><br>Please <a id="SearchLogin" href="/auth">Login</a> to search for vinyls.</h2>
+    <% } %>
 </section>
