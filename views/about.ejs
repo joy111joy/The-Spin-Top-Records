@@ -1,12 +1,42 @@
 <html lang="en">
-    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/headInfo.ejs') %>
     <body>
-        <div class="content">
-            <h2>About</h2>
-        </div>
-        <%- include('./partials/status.ejs') %>
-        </br>
-        <%- include('./partials/auth.ejs') %>
+        <%- include('./partials/header.ejs') %>
+        <main>
+            <section id="Banner">
+                <img src="/images/RecordShelf.jpg" alt="" id="AboutImg">
+                <h2>About</h2>
+            </section>
+            <div class="AboutCont">
+                <div>
+                    <h2>Definitely not the worlds largest vinyl database</h2>
+                    <p>Our vinyl database contains over 100 different records and albums!
+                        We have a wide variety of genres and artists to choose like rock, pop, and jazz. 
+                        Our vinyls contains information on the artist, album, and year of release. When searching 
+                        a vinyl try clicking on the album to see more information on it. 
+                        <br><br>
+                        We are constantly (never) updating our database with new records and albums.
+                    </p>
+                </div>
+                <div>
+                    <h2>Looking for something?</h2>
+                    <p>Our search feature is a handy tool to allow you to search for exactly what you want to see
+                        whether your looking for a specific album or artist. Maybe you want to find music based on its
+                        genre. Our search feature will help you find what you are looking for.
+                    </p>
+                </div>
+                <div>
+                    <h2>Want to add to our database?</h2>
+                    <p>Our data is open to the public. Currently, we do not offer ways forou to input data on your own. </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <%- include('./partials/status.ejs') %>
+        </main>
+        <%- include('./partials/footer.ejs') %>
     </body>
-    <%- include('./partials/footer.ejs') %>
 </html>

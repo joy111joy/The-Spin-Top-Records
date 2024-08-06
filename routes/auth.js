@@ -6,7 +6,11 @@ const router = express.Router();
 const myEventEmitter = require('../services/logEvents.js');
 
 // const { addLogin, getLoginByUsername } = require('../services/p.auth.dal')
-const { addLogin, getLoginByUsername } = require('../services/m.auth.dal')
+const { addLogin, getLoginByUsername, getRecords } = require('../services/m.auth.dal')
+
+let record = getRecords();
+
+console.log(record);
 
 router.get('/', async (req, res) => {
     if(DEBUG) console.log('login page: ');
@@ -45,7 +49,6 @@ router.post('/', async (req, res) => {
         } else {
             myEventEmitter.emit('event', 'auth.post', 'INVALID', `Incorrect password was entered.`);
             req.session.status = 'Incorrect password was entered.'
-            console.log(hashedPassword);
             console.log(req.body.password);
             res.redirect('/auth')
             return;

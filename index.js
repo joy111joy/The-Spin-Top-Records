@@ -44,10 +44,13 @@ app.get("/", async (req, res) => {
     "landing page (index.ejs) was displayed."
   );
   const user = req.session.user;
+  const record = req.session.record;
   res.render("index", { 
     user: user ? user.username : 'Guest',
-    status: req.session.status
+    status: req.session.status,
+    record: record
   });
+
 });
 
 app.get("/about", async (req, res) => {
