@@ -3,9 +3,9 @@ const dal = require("./m.db");
 
 async function getLogins() {
   try {
-    console.log("Connecting to database...");
-    const db = await dal.connect();
-    console.log("Connected to database");
+    console.log("Connecting to MongoDB...");
+    const db = await dal.connectMongo();
+    console.log("Connected to MongoDB");
 
     console.log("Fetching logins...");
     const cursor = db.collection("logins").find();
@@ -19,10 +19,9 @@ async function getLogins() {
   }
 }
 
-
 async function getLoginByUsername(name) {
   try {
-    const db = await dal.connect();
+    const db = await dal.connectMongo();
     const result = await db.collection("logins").findOne({ username: name });
     return result;
   } catch (error) {
@@ -33,7 +32,7 @@ async function getLoginByUsername(name) {
 
 async function getLoginByEmail(email) {
   try {
-    const db = await dal.connect();
+    const db = await dal.connectMongo();
     const result = await db.collection("logins").findOne({ email: email });
     return result;
   } catch (error) {
@@ -44,7 +43,7 @@ async function getLoginByEmail(email) {
 
 async function getLoginById(id) {
   try {
-    const db = await dal.connect();
+    const db = await dal.connectMongo();
     const result = await db.collection("logins").findOne({ _id: new ObjectId(id) });
     return result;
   } catch (error) {
@@ -63,7 +62,7 @@ async function addLogin(name, email, password, uuidv4) {
   };
 
   try {
-    const db = await dal.connect();
+    const db = await dal.connectMongo();
     const result = await db.collection("logins").insertOne(newLogin);
     return result.insertedId;
   } catch (error) {
@@ -78,20 +77,9 @@ async function addLogin(name, email, password, uuidv4) {
 
 async function getRecords() {
   try {
-    console.log("Connecting to database...");
-    const db = await dal.connect();
-    console.log("Connected to database");
-
-    console.log("Fetching Records...");
-    const cursor = db.collection("Records").find();
-    const results = await cursor.toArray();
-
-
-async function getRecords() {
-  try {
-    console.log("Connecting to database...");
-    const db = await dal.connect();
-    console.log("Connected to database");
+    console.log("Connecting to MongoDB...");
+    const db = await dal.connectMongo();
+    console.log("Connected to MongoDB");
 
     console.log("Fetching records...");
     const cursor = db.collection("Records").find();
@@ -105,9 +93,20 @@ async function getRecords() {
   }
 }
 
+async function searchRecords(query) {
+  try {
+    const db = await dal.connectMongo();
+    const cursor = db.collection("Records").find({ title: new RegExp(query, 'i') }); // Adjust the query based on your collection schema
+    const results = await cursor.toArray();
+    return results;
+  } catch (error) {
+    console.error("Error in searchRecords:", error);
+    throw error;
+  }
+}
 
 module.exports = {
-  getRecords,
+  searchRecords,
   getLogins,
   getLoginByUsername,
   addLogin,

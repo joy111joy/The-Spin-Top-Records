@@ -9,7 +9,6 @@ const myEventEmitter = require('../services/logEvents.js');
 const { addLogin, getLoginByUsername, getRecords } = require('../services/m.auth.dal')
 
 
-let records = getRecords();
 
 router.get('/', async (req, res) => {
     if(DEBUG) console.log('login page: ');

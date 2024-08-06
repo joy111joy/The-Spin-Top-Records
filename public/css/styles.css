@@ -97,6 +97,22 @@ a#SearchLogin{
 #Search::placeholder {
     font-size: large;
 }
+
+.checkbox {
+    background-color: #141414;
+    width: 600px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: raleway;
+    color: white;
+    font-size: 20pt;
+    position: relative;
+    margin-top: 400px;
+}
  
 #Content {
     padding-top: 30px;

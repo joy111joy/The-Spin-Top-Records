@@ -7,8 +7,8 @@ const app = express();
 const session = require("express-session");
 const apiRouter = require("./routes/api/index");
 const myEventEmitter = require("./services/logEvents.js");
-const { getRecords } = require('./services/m.auth.dal');
-const dal = require('./services/m.db');
+const { connectMongo } = require('./services/m.db');
+const { connectPostgres } = require('./services/p.db');
 
 app.use("/api", apiRouter);
 
@@ -37,7 +37,6 @@ app.listen(PORT, (err) => {
   );
   console.log(`Simple app running on port ${PORT}.`);
 });
-
 app.get("/", async (req, res) => {
   myEventEmitter.emit(
     "event",
@@ -47,23 +46,35 @@ app.get("/", async (req, res) => {
   );
   const user = req.session.user;
   const query = req.query.query || "";
+  const selectedDatabases = req.query.database || [];
+
+  let records = [];
 
   try {
-    let records = [];
-    if (user && query) {
-      const db = await dal.connect();
-      records = await db.collection("Records").find({
-        $or: [
-          { title: { $regex: query, $options: 'i' } },
-          { artist: { $regex: query, $options: 'i' } },
-          { description: { $regex: query, $options: 'i' } },
-          { year: { $regex: query, $options: 'i' } },
-          { label: { $regex: query, $options: 'i' } },
-          { genre: { $regex: query, $options: 'i' } }
-        ]
-      }).toArray();
-    } else if (user) {
-      records = await getRecords();
+    if (user) {
+      if (selectedDatabases.includes("both")) {
+        const db1 = await connectMongo(); // MongoDB connection
+        const db2 = await connectPostgres(); // PostgreSQL connection
+
+        // Fetch records from both
+        const recordsMongo = await db1.collection("Records").find({ /* your query */ }).toArray();
+        
+        // Define the PostgreSQL query
+        const sqlQuery = `SELECT * FROM public."Records" WHERE title ILIKE $1`;
+        const recordsPostgres = await db2.query(sqlQuery, [`%${query}%`]);
+
+        records = [...recordsMongo, ...recordsPostgres.rows];
+      } else if (selectedDatabases.includes("mongodb")) {
+        const db = await connectMongo(); // MongoDB connection
+        records = await db.collection("Records").find({ /* your query */ }).toArray();
+      } else if (selectedDatabases.includes("postgresql")) {
+        const db = await connectPostgres(); // PostgreSQL connection
+        
+        // Define the PostgreSQL query
+        const sqlQuery = `SELECT * FROM public."Records" WHERE title ILIKE $1`;
+        const result = await db.query(sqlQuery, [`%${query}%`]);
+        records = result.rows;
+      }
     }
 
     res.render("index", { 
@@ -76,6 +87,7 @@ app.get("/", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
+
 
 app.get("/about", async (req, res) => {
   myEventEmitter.emit(
