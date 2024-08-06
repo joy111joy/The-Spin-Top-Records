@@ -86,6 +86,17 @@ async function getRecords() {
     const cursor = db.collection("Records").find();
     const results = await cursor.toArray();
 
+
+async function getRecords() {
+  try {
+    console.log("Connecting to database...");
+    const db = await dal.connect();
+    console.log("Connected to database");
+
+    console.log("Fetching records...");
+    const cursor = db.collection("Records").find();
+    const results = await cursor.toArray();
+    
     console.log("Records fetched");
     return results;
   } catch (error) {
@@ -94,6 +105,7 @@ async function getRecords() {
   }
 }
 
+
 module.exports = {
   getRecords,
   getLogins,
@@ -101,4 +113,5 @@ module.exports = {
   addLogin,
   getLoginByEmail,
   getLoginById,
+  getRecords,
 };
