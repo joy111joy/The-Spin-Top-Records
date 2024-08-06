@@ -10,6 +10,8 @@ const myEventEmitter = require("./services/logEvents.js");
 const { connectMongo } = require('./services/m.db');
 const { connectPostgres } = require('./services/p.db');
 
+
+
 app.use("/api", apiRouter);
 
 const PORT = process.env.PORT || 3000;
@@ -37,6 +39,7 @@ app.listen(PORT, (err) => {
   );
   console.log(`Simple app running on port ${PORT}.`);
 });
+
 app.get("/", async (req, res) => {
   myEventEmitter.emit(
     "event",
@@ -44,6 +47,7 @@ app.get("/", async (req, res) => {
     "INFO",
     "landing page (index.ejs) was displayed."
   );
+
   const user = req.session.user;
   const query = req.query.query || "";
   const selectedDatabases = req.query.database || [];
@@ -53,41 +57,45 @@ app.get("/", async (req, res) => {
   try {
     if (user) {
       if (selectedDatabases.includes("both")) {
-        const db1 = await connectMongo(); // MongoDB connection
-        const db2 = await connectPostgres(); // PostgreSQL connection
-
-        // Fetch records from both
-        const recordsMongo = await db1.collection("Records").find({ /* your query */ }).toArray();
-        
-        // Define the PostgreSQL query
-        const sqlQuery = `SELECT * FROM public."Records" WHERE title ILIKE $1`;
-        const recordsPostgres = await db2.query(sqlQuery, [`%${query}%`]);
-
+        const db1 = await connectMongo();
+        const db2 = await connectPostgres();
+        const recordsMongo = await db1
+          .collection("Records")
+          .find({ title: new RegExp(query, "i") })
+          .toArray();
+        const recordsPostgres = await db2.query(
+          `SELECT * FROM public."Records" WHERE title ILIKE $1`,
+          [`%${query}%`]
+        );
         records = [...recordsMongo, ...recordsPostgres.rows];
       } else if (selectedDatabases.includes("mongodb")) {
-        const db = await connectMongo(); // MongoDB connection
-        records = await db.collection("Records").find({ /* your query */ }).toArray();
+        const db = await connectMongo();
+        records = await db
+          .collection("Records")
+          .find({ title: new RegExp(query, "i") })
+          .toArray();
       } else if (selectedDatabases.includes("postgresql")) {
-        const db = await connectPostgres(); // PostgreSQL connection
-        
-        // Define the PostgreSQL query
-        const sqlQuery = `SELECT * FROM public."Records" WHERE title ILIKE $1`;
-        const result = await db.query(sqlQuery, [`%${query}%`]);
+        const db = await connectPostgres();
+        const result = await db.query(
+          `SELECT * FROM public."Records" WHERE title ILIKE $1`,
+          [`%${query}%`]
+        );
         records = result.rows;
       }
     }
 
-    res.render("index", { 
-      user: user ? user.username : 'Guest',
+    res.render("index", {
+      user: user ? user.username : "Guest",
       records: records,
-      status: req.session.status
+      query: query,
+      selectedDatabases: selectedDatabases,
+      status: req.session.status,
     });
   } catch (error) {
     console.error("Error fetching records:", error);
     res.status(500).send("Internal Server Error");
   }
 });
-
 
 app.get("/about", async (req, res) => {
   myEventEmitter.emit(

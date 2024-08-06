@@ -4,8 +4,8 @@
         <%- include('./partials/header.ejs') %>
         <main>
             <div>
-                <%- include('./partials/IndexBanner.ejs') %>
-                <%- include('./partials/IndexCont.ejs') %>
+                <%- include('./partials/IndexBanner.ejs', { query: query, selectedDatabases: selectedDatabases, user: user }) %>
+                <%- include('./partials/IndexCont.ejs', { records: records, user: user }) %>
             </div>
 
         </main>

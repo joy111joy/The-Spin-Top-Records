@@ -1,24 +1,20 @@
-const { ObjectId } = require("mongodb");
-const dal = require("./m.db");
+const { MongoClient } = require('mongodb');
+const url = process.env.MDBLOCAL;
+const dbName = process.env.DBNAME;
 
-async function getFullText(fulltext) {
-  if (DEBUG) console.log("mongo.dal.getFullText()");
+async function getFullText(keyword) {
+  const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
   try {
-    await dal.connect();
-    const database = dal.db("SpinTop");
-    const collection = database.collection("records");
-    const result = await collection
-      .find({ $text: { $search: fulltext } })
-      .toArray();
-    return result;
-  } catch (err) {
-    console.error("Error occurred while connecting to MongoDB:", err);
-    throw err;
+    await client.connect();
+    const db = client.db(dbName);
+    const collection = db.collection('Records');
+    const results = await collection.find({
+      $text: { $search: keyword }
+    }).toArray();
+    return results;
   } finally {
-    dal.close();
+    await client.close();
   }
 }
 
-module.exports = {
-  getFullText,
-};
+module.exports = { getFullText };

@@ -1,30 +1,26 @@
-//const dal = require("./SpinTop.db");
-const dal = require("./p.db");
+const { Pool } = require('pg');
+const pool = new Pool({
+  user: process.env.PGUSER,
+  host: process.env.PGHOST,
+  database: process.env.PGDATABASE,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
+});
 
-let getFullText = function (text) {
-  if (DEBUG) console.log("postgres.dal.getFullText()");
-  return new Promise(function (resolve, reject) {
-    let sql = `
-    SELECT * FROM public.records, public.records_fulltext
-    WHERE 'title' iLIKE $1
-       OR 'artist' ILIKE $1
-       OR 'genre' ILIKE $1
-       OR 'label' ILIKE $1
-       OR 'description' ILIKE $1`;
+async function getFullText(keyword) {
+  try {
+    const query = `
+      SELECT *
+      FROM public."Records"
+      WHERE to_tsvector("title" || ' ' || "artist" || ' ' || "genre" || ' ' || "label" || ' ' || "description") @@ plainto_tsquery($1)
+    `;
+    const values = [keyword];
+    const result = await pool.query(query, values);
+    return result.rows;
+  } catch (err) {
+    console.error('Error executing PostgreSQL full text search', err);
+    return [];
+  }
+}
 
-    if (DEBUG) console.log(sql);
-    dal.query(sql, [text], (err, result) => {
-      if (err) {
-        if (DEBUG) console.log(err);
-        reject(new Error(err.message || "Database query error"));
-      } else {
-        if (DEBUG) console.log(`Row count: ${result.rowCount}`);
-        resolve(result.rows);
-      }
-    });
-  });
-};
-
-module.exports = {
-  getFullText,
-};
+module.exports = { getFullText };
