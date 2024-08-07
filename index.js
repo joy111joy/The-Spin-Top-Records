@@ -48,7 +48,7 @@ app.get("/", async (req, res) => {
 
   const user = req.session.user;
   const query = req.query.query || "";
-  const selectedDatabases = req.query.database ? req.query.database.split(',') : [];
+  const selectedDatabases = req.query.database ? req.query.database.split(',') : ["mongodb"]; // Default to MongoDB if no selection
 
   let records = [];
 

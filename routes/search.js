@@ -12,7 +12,7 @@ router.use(authenticateJWT);
 router.post("/", async (req, res) => {
   try {
     const keyword = req.body.keyword;
-    const selectedDatabases = req.body.database || [];
+    const selectedDatabases = req.body.database.length ? req.body.database : ["mongodb"]; // Default to MongoDB if no selection
 
     // Log the keyword and selected databases
     console.log(`Keyword: ${keyword}`);
