@@ -5,33 +5,43 @@ const myEventEmitter = require("../services/logEvents.js");
 const pDal = require("../services/p.fulltext.dal");
 const mDal = require("../services/m.fulltext.dal");
 
-//SET PROTECTION
+// SET PROTECTION
 router.use(setToken);
 router.use(authenticateJWT);
 
-router.get("/", async (req, res) => {
-  const theResults = [];
-  myEventEmitter.emit(
-    "event",
-    "app.get /search",
-    "INFO",
-    "search page (search.ejs) was displayed."
-  );
-  res.render("search", { status: req.session.status, theResults });
-});
-
 router.post("/", async (req, res) => {
   try {
-    let theResults1 = await mDal.getFullText(req.body.keyword);
-    let theResults2 = await pDal.getFullText(req.body.keyword);
-    const theResults = [...theResults1, ...theResults2];
+    const keyword = req.body.keyword;
+    const selectedDatabases = req.body.database || [];
+
+    // Log the keyword and selected databases
+    console.log(`Keyword: ${keyword}`);
+    console.log(`Selected Databases: ${selectedDatabases}`);
+
+    let theResults = [];
+
+    if (selectedDatabases.includes("both")) {
+      const theResults1 = await mDal.getFullText(keyword);
+      const theResults2 = await pDal.getFullText(keyword);
+      theResults = [...theResults1, ...theResults2];
+    } else if (selectedDatabases.includes("mongodb")) {
+      theResults = await mDal.getFullText(keyword);
+    } else if (selectedDatabases.includes("postgresql")) {
+      theResults = await pDal.getFullText(keyword);
+    }
+
+    // Log the final results
+    console.log("Final Results:", theResults);
+
     myEventEmitter.emit(
       "event",
       "app.post /search",
       "INFO",
-      "search page (search.ejs) was displayed."
+      "search results fetched."
     );
-    res.render("search", { status: req.session.status, theResults });
+
+    // Render only the results to be injected into the existing results container
+    res.render("partials/IndexCont.ejs", { records: theResults, user: req.session.user });
   } catch (error) {
     console.error("Error performing search:", error);
     res.status(500).send("Internal Server Error");

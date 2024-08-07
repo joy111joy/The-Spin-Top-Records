@@ -1,69 +1,23 @@
 <!-- views/partials/IndexCont.ejs -->
-
 <% if (user && user !== 'Guest') { %>
-    <section id="Content">
-        <h2>Results:</h2>
-        <div id="Results">
-            <% records.forEach(record => { %>
-                <div class="Vinyl">
-                    <div class="Vinyl-inner">
-                        <div class="Vinyl-front">
-                            <h3><%= record.title %></h3>
-                            <p><%= record.artist %></p>
-                        </div>
-                        <div class="Vinyl-back">
-                            <h3><%= record.title %></h3>
-                            <p><%= record.description %></p>
-                        </div>
+    <% if (records.length > 0) { %>
+        <% records.forEach(record => { %>
+            <div class="Vinyl">
+                <div class="Vinyl-inner">
+                    <div class="Vinyl-front">
+                        <h3><%= record.title %></h3>
+                        <p><%= record.artist %></p>
+                    </div>
+                    <div class="Vinyl-back">
+                        <h3><%= record.title %></h3>
+                        <p><%= record.description %></p>
                     </div>
                 </div>
-            <% }); %>
-        </div>
-    </section>
+            </div>
+        <% }); %>
     <% } else { %>
-    <p>Please log in to view the vinyl records.</p>
+        <p>No results found.</p>
     <% } %>
-        
-    <script>
-        function getRandomColor() {
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-    
-        function applyRandomGradient(element) {
-            const color1 = getRandomColor();
-            const color2 = getRandomColor();
-            const vinylFront = element.querySelector('.Vinyl-front');
-            vinylFront.style.background = `linear-gradient(to bottom right, ${color1}, ${color2})`;
-        }
-    
-        function toggleVinyl() {
-            const vinylElement = this;
-            const vinylInner = vinylElement.querySelector('.Vinyl-inner');
-    
-            if (vinylElement.classList.contains('expanded')) {
-                vinylElement.classList.remove('expanded');
-                vinylInner.classList.remove('flipped');
-            } else {
-                vinylElement.classList.add('expanded');
-                vinylInner.classList.add('flipped');
-            }
-        }
-    
-        function setupVinylClickHandlers() {
-            const vinylElements = document.getElementsByClassName('Vinyl');
-            for (let i = 0; i < vinylElements.length; i++) {
-                const vinyl = vinylElements[i];
-                applyRandomGradient(vinyl);
-    
-                vinyl.addEventListener('click', toggleVinyl);
-            }
-        }
-        window.onload = setupVinylClickHandlers;
-    </script>
-    
-    
+<% } else { %>
+    <p>Please log in to view the vinyl records.</p>
+<% } %>

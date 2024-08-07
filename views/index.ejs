@@ -5,10 +5,96 @@
         <main>
             <div>
                 <%- include('./partials/IndexBanner.ejs', { query: query, selectedDatabases: selectedDatabases, user: user }) %>
-                <%- include('./partials/IndexCont.ejs', { records: records, user: user }) %>
+                <section id="Content">
+                    <h2>Results:</h2>
+                    <div id="Results">
+                        <% records.forEach(record => { %>
+                            <div class="Vinyl">
+                                <div class="Vinyl-inner">
+                                    <div class="Vinyl-front">
+                                        <h3><%= record.title %></h3>
+                                        <p><%= record.artist %></p>
+                                    </div>
+                                    <div class="Vinyl-back">
+                                        <h3><%= record.title %></h3>
+                                        <p><%= record.description %></p>
+                                    </div>
+                                </div>
+                            </div>
+                        <% }); %>
+                    </div>
+                </section>
             </div>
-
         </main>
         <%- include('./partials/footer.ejs') %>
+        
+        <script>
+            document.getElementById('searchForm').addEventListener('submit', async function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const formData = new FormData(this);
+
+                try {
+                    const response = await fetch('/search', {
+                        method: 'POST',
+                        body: new URLSearchParams(formData),
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                    });
+
+                    if (response.ok) {
+                        const result = await response.text();
+                        // Replace the content inside the #Results container
+                        document.getElementById('Results').innerHTML = result;
+                        setupVinylClickHandlers(); // Reinitialize click handlers if needed
+                    } else {
+                        console.error('Error performing search');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            });
+
+            function getRandomColor() {
+                const letters = '0123456789ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            function applyRandomGradient(element) {
+                const color1 = getRandomColor();
+                const color2 = getRandomColor();
+                const vinylFront = element.querySelector('.Vinyl-front');
+                vinylFront.style.background = `linear-gradient(to bottom right, ${color1}, ${color2})`;
+            }
+
+            function toggleVinyl() {
+                const vinylElement = this;
+                const vinylInner = vinylElement.querySelector('.Vinyl-inner');
+
+                if (vinylElement.classList.contains('expanded')) {
+                    vinylElement.classList.remove('expanded');
+                    vinylInner.classList.remove('flipped');
+                } else {
+                    vinylElement.classList.add('expanded');
+                    vinylInner.classList.add('flipped');
+                }
+            }
+
+            function setupVinylClickHandlers() {
+                const vinylElements = document.getElementsByClassName('Vinyl');
+                for (let i = 0; i < vinylElements.length; i++) {
+                    const vinyl = vinylElements[i];
+                    applyRandomGradient(vinyl);
+
+                    vinyl.addEventListener('click', toggleVinyl);
+                }
+            }
+            window.onload = setupVinylClickHandlers;
+        </script>
     </body>
 </html>

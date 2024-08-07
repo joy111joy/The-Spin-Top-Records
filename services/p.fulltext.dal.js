@@ -12,9 +12,13 @@ async function getFullText(keyword) {
     const query = `
       SELECT *
       FROM public."Records"
-      WHERE to_tsvector("title" || ' ' || "artist" || ' ' || "genre" || ' ' || "label" || ' ' || "description") @@ plainto_tsquery($1)
+      WHERE "title" ILIKE $1
+        OR "artist" ILIKE $1
+        OR "genre" ILIKE $1
+        OR "label" ILIKE $1
+        OR "description" ILIKE $1
     `;
-    const values = [keyword];
+    const values = [`%${keyword}%`];
     const result = await pool.query(query, values);
     return result.rows;
   } catch (err) {
@@ -24,3 +28,4 @@ async function getFullText(keyword) {
 }
 
 module.exports = { getFullText };
+

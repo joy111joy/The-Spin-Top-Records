@@ -2,8 +2,8 @@
     <img src="/images/surya-urs-8YZe_V0Bn_o-unsplash.jpg" alt="">
     <h2>Looking for a Vinyl?</h2>
     <% if (user && user !== 'Guest') { %>
-      <form action="/" method="get">
-        <input type="text" placeholder="Search For Vinyls" id="Search" name="query" value="<%= query %>">
+      <form id="searchForm" action="/search" method="post">
+        <input type="text" placeholder="Search For Vinyls" id="Search" name="keyword" value="<%= query %>">
         <div class="checkbox">
           <label>
             <input type="checkbox" name="database" value="postgresql" <% if (selectedDatabases.includes('postgresql')) { %>checked<% } %>> PostgreSQL
@@ -15,9 +15,9 @@
             <input type="checkbox" name="database" value="both" <% if (selectedDatabases.includes('both')) { %>checked<% } %>> Both
           </label>
         </div>
+        <button type="submit">Search</button>
       </form>
     <% } else { %>
       <h2><br><br><br>Please <a id="SearchLogin" href="/auth">Login</a> to search for vinyls.</h2>
     <% } %>
-  </section>
-  
+</section>

@@ -10,8 +10,6 @@ const myEventEmitter = require("./services/logEvents.js");
 const { connectMongo } = require('./services/m.db');
 const { connectPostgres } = require('./services/p.db');
 
-
-
 app.use("/api", apiRouter);
 
 const PORT = process.env.PORT || 3000;
@@ -50,7 +48,7 @@ app.get("/", async (req, res) => {
 
   const user = req.session.user;
   const query = req.query.query || "";
-  const selectedDatabases = req.query.database || [];
+  const selectedDatabases = req.query.database ? req.query.database.split(',') : [];
 
   let records = [];
 
