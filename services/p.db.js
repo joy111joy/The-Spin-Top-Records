@@ -3,6 +3,7 @@ require('dotenv').config();
 
 // Create a pool instance
 const pgPool = new Pool({
+  // Use environment variables to connect to the database
   user: process.env.PGUSER,
   host: process.env.PGHOST,
   database: process.env.PGDATABASE,
@@ -10,7 +11,7 @@ const pgPool = new Pool({
   port: process.env.PGPORT,
 });
 
-// Function to get a client from the pool
+//function to connect to postgresql used in auth and fulltext files
 async function connectPostgres() {
   console.log("Connecting to Postgres...");
   try {

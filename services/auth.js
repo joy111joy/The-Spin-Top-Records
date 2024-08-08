@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const authenticateJWT = (req, res, next) => {
   const authHeader = req.headers.authorization;
 
+  // Check if the header is present
   if (authHeader) {
     const token = authHeader.split(" ")[1];
     jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
@@ -20,6 +21,7 @@ const authenticateJWT = (req, res, next) => {
   }
 };
 
+//function to set the token
 const setToken = (req, res, next) => {
   if (req.session && req.session.token) {
     req.headers["authorization"] = `Bearer ${req.session.token}`;

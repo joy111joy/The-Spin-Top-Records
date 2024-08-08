@@ -7,8 +7,10 @@ const pool = new Pool({
   port: process.env.PGPORT,
 });
 
+// Function to search for a keyword in all columns of the Records table
 async function getFullText(keyword) {
   try {
+    // Create a query to search for the keyword in all columns
     const query = `
       SELECT *
       FROM public."Records"
@@ -18,10 +20,12 @@ async function getFullText(keyword) {
         OR "label" ILIKE $1
         OR CAST("ReleaseYear" AS TEXT) ILIKE $1
     `;
+    // Execute the query
     const values = [`%${keyword}%`];
     const result = await pool.query(query, values);
+    // Return the results
     return result.rows;
-  } catch (err) {
+  } catch (err) { // Error handling
     console.error('Error executing PostgreSQL full text search', err);
     return [];
   }

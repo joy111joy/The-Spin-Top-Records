@@ -1,5 +1,6 @@
 const connectPostgres = require("./p.db");
 
+//function to get all logins
 async function getLogins() {
   let SQL = `SELECT * FROM public."Logins"`;
   try {
@@ -11,6 +12,7 @@ async function getLogins() {
   }
 }
 
+//function to get login by username
 async function getLoginByUsername(username) {
   let SQL = `SELECT login_id AS id, username, password, email FROM public."Logins" WHERE username = $1`;
   try {
@@ -23,6 +25,7 @@ async function getLoginByUsername(username) {
   }
 }
 
+//function to get login by email
 async function getLoginByEmail(email) {
   let SQL = `SELECT login_id AS id, username, password, email FROM public."Logins" WHERE email = $1`;
   try {
@@ -34,6 +37,7 @@ async function getLoginByEmail(email) {
   }
 }
 
+//function to get login by id
 async function getLoginById(id) {
   let SQL = `SELECT login_id AS id, username, password, email FROM public."Logins" WHERE login_id = $1`;
   try {
@@ -45,6 +49,7 @@ async function getLoginById(id) {
   }
 }
 
+//function to add login
 async function addLogin(name, email, password, uuidv4) {
   let SQL = `INSERT INTO public."Logins"(username, email, password, uuid)
     VALUES ($1, $2, $3, $4) RETURNING login_id;`;
@@ -58,6 +63,7 @@ async function addLogin(name, email, password, uuidv4) {
   }
 }
 
+//function to verify login
 async function verifyLogin(username, password) {
   const isMatch = await bcrypt.compare('P@ssw0rd123!', 'stored-hashed-password');
   console.log('Password match:', isMatch);
@@ -79,6 +85,8 @@ async function verifyLogin(username, password) {
   }
 }
 
+
+//function to get records
 async function getRecords() {
   console.log("Connecting to pg database...");
   let SQL = `SELECT * FROM public."Records"`;
@@ -91,6 +99,7 @@ async function getRecords() {
   }
 }
 
+//function to search records
 async function searchRecords(query) {
   let SQL = `SELECT * FROM public."Records" WHERE title ILIKE $1`; // Adjust based on your table schema
   try {
@@ -103,6 +112,7 @@ async function searchRecords(query) {
   }
 }
 
+//router GET search
 router.get('/search', async (req, res) => {
   req.session.user = user;
   return;

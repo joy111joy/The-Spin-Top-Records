@@ -1,7 +1,7 @@
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
-
+//Import needed modules
 const express = require("express");
 const app = express();
 const session = require("express-session");
@@ -10,11 +10,14 @@ const myEventEmitter = require("./services/logEvents.js");
 const { connectMongo } = require('./services/m.db');
 const { connectPostgres } = require('./services/p.db');
 
+//Use the API router
 app.use("/api", apiRouter);
 
+//Set the port
 const PORT = process.env.PORT || 3000;
 global.DEBUG = true;
 
+//Set the view engine and static folder
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
@@ -27,6 +30,7 @@ app.use(
   })
 );
 
+//Start the server
 app.listen(PORT, (err) => {
   if (err) console.log(err);
   myEventEmitter.emit(
@@ -38,6 +42,7 @@ app.listen(PORT, (err) => {
   console.log(`Simple app running on port ${PORT}.`);
 });
 
+//Routes
 app.get("/", async (req, res) => {
   myEventEmitter.emit(
     "event",
@@ -46,12 +51,15 @@ app.get("/", async (req, res) => {
     "landing page (index.ejs) was displayed."
   );
 
+  // Get the user from the session
   const user = req.session.user;
+  // Get the query from the URL query string
   const query = req.query.query || "";
   const selectedDatabases = req.query.database ? req.query.database.split(',') : ["mongodb"]; // Default to MongoDB if no selection
 
   let records = [];
 
+  // Log the query and selected databases using try catch for error handling
   try {
     if (user) {
       if (selectedDatabases.includes("both")) {
@@ -82,6 +90,7 @@ app.get("/", async (req, res) => {
       }
     }
 
+    // Render the index page with the user, records, query, selected databases, and status
     res.render("index", {
       user: user ? user.username : "Guest",
       records: records,
@@ -89,12 +98,13 @@ app.get("/", async (req, res) => {
       selectedDatabases: selectedDatabases,
       status: req.session.status,
     });
-  } catch (error) {
+  } catch (error) { //Error handling
     console.error("Error fetching records:", error);
     res.status(500).send("Internal Server Error");
   }
 });
 
+// GET the about page
 app.get("/about", async (req, res) => {
   myEventEmitter.emit(
     "event",
@@ -105,16 +115,16 @@ app.get("/about", async (req, res) => {
   res.render("about", { status: req.session.status });
 });
 
+//Search router
 const searchRouter = require("./routes/search");
 app.use("/search", searchRouter);
 
+// GET the login page
 const authRouter = require("./routes/auth");
 app.use("/auth", authRouter);
 
-app.get("/search", async (req, res) => {
-  const user = req.session.user;
-});
 
+//status 404
 app.use((req, res) => {
   res.status(404).render("404", { status: req.session.status });
 });

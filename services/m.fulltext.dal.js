@@ -1,8 +1,10 @@
 const { connectMongo } = require("./m.db");
 
+//function to get records by full text search using regex
 async function getFullText(keyword) {
   const db = await connectMongo();
   try {
+    // Create a query object with a regex expression
     const regexQuery = {
       $or: [
         { title: { $regex: keyword, $options: "i" } },
@@ -13,10 +15,12 @@ async function getFullText(keyword) {
       ]
     };
 
+    // Find records that match the regex query
     const regexResults = await db.collection("Records").find(regexQuery).toArray();
 
+    // Return the results
     return [...regexResults];
-  } catch (error) {
+  } catch (error) { //Error handling
     console.error("Error in getFullText:", error);
     throw error;
   }

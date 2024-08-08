@@ -1,3 +1,4 @@
+//import needed modules for the auth router
 const express = require('express');
 const bcrypt = require('bcrypt');
 const uuid = require('uuid');
@@ -5,17 +6,17 @@ const jwt = require('jsonwebtoken');
 const router = express.Router();
 const myEventEmitter = require('../services/logEvents.js');
 
-// const { addLogin, getLoginByUsername } = require('../services/p.auth.dal')
-const { addLogin, getLoginByUsername, getRecords } = require('../services/m.auth.dal')
+const { addLogin, getLoginByUsername} = require('../services/m.auth.dal')
 
 
-
+// GET (display) the login page
 router.get('/', async (req, res) => {
     if(DEBUG) console.log('login page: ');
     res.render('login', {status: req.session.status});
     return;
 });
 
+// POST (login) the user
 router.post('/', async (req, res) => {
     try {
         if(DEBUG) console.log('auth.getLoginByUsername().try');
@@ -60,7 +61,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// GET (display) the register html page
+// GET (display) the register page
 router.get('/new', async (req, res) => {
     res.render('register', {status: req.session.status});
     return;
@@ -126,11 +127,11 @@ router.get('/exit', async (req, res) => {
     // clear out the express-session
     req.session.destroy((err) => {
         if (err) {
-            // Handle error case
+            // Handle error 
             console.error("Session destruction error:", err);
             return res.status(500).send("Could not log out.");
         } else {
-            // Redirect to home page or login page after successful logout
+            // Redirect to home page after login/register
             res.redirect('/');
             return;
         }

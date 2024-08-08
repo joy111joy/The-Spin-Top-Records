@@ -1,6 +1,7 @@
 const { ObjectId } = require("mongodb");
 const dal = require("./m.db");
 
+//function to get all logins
 async function getLogins() {
   try {
     console.log("Connecting to MongoDB...");
@@ -19,6 +20,7 @@ async function getLogins() {
   }
 }
 
+//function to get login by username
 async function getLoginByUsername(name) {
   try {
     const db = await dal.connectMongo();
@@ -30,6 +32,7 @@ async function getLoginByUsername(name) {
   }
 }
 
+//function to get login by email
 async function getLoginByEmail(email) {
   try {
     const db = await dal.connectMongo();
@@ -41,6 +44,7 @@ async function getLoginByEmail(email) {
   }
 }
 
+//function to get login by id
 async function getLoginById(id) {
   try {
     const db = await dal.connectMongo();
@@ -52,7 +56,9 @@ async function getLoginById(id) {
   }
 }
 
+//function to add login
 async function addLogin(name, email, password, uuidv4) {
+  // Create a new login object
   let newLogin = {
     username: name,
     email: email,
@@ -75,6 +81,7 @@ async function addLogin(name, email, password, uuidv4) {
   }
 }
 
+//function to get all records
 async function getRecords() {
   try {
     console.log("Connecting to MongoDB...");
@@ -93,6 +100,7 @@ async function getRecords() {
   }
 }
 
+//function to search records
 async function searchRecords(query) {
   try {
     const db = await dal.connectMongo();

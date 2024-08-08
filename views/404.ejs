@@ -1,12 +1,17 @@
 <html lang="en">
-    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/headInfo.ejs') %>
     <body>
-        <div class="content">
-            <h2>404 - content not found</h2>
-        </div>
-        <%- include('./partials/status.ejs') %>
-        </br>
-        <%- include('./partials/auth.ejs') %>
+        <%- include('./partials/header.ejs') %>
+        <main>
+            <div>
+                <section id="Banner">
+                    <img src="/images/surya-urs-8YZe_V0Bn_o-unsplash.jpg" alt="">
+                    <h2>Couldn't find what you were looking for <br>ERROR - 404</h2>
+                    
+                </section>
+                                
+            </div>
+        </main>
+        <%- include('./partials/footer.ejs') %>
     </body>
-    <%- include('./partials/footer.ejs') %>
 </html>
