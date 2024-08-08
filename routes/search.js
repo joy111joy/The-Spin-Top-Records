@@ -8,17 +8,20 @@ const mDal = require("../services/m.fulltext.dal");
 // SET PROTECTION
 router.use(setToken);
 router.use(authenticateJWT);
+ 
+
 
 router.post("/", async (req, res) => {
   try {
     const keyword = req.body.keyword;
     const selectedDatabases = req.body.database.length ? req.body.database : ["mongodb"]; // Default to MongoDB if no selection
-
+    const user = req.session.user;
+    const id = user ? user._id : "Guest";
     // Log the keyword and selected databases
     console.log(`Keyword: ${keyword}`);
     console.log(`Selected Databases: ${selectedDatabases}`);
-
-    let theResults = [];
+    console.log(`User: ${id}`);
+    myEventEmitter.emit('event', 'search.post', 'keyword', `User: ${id}, Keyword: ${keyword}`);    let theResults = [];
 
     if (selectedDatabases.includes("both")) {
       const theResults1 = await mDal.getFullText(keyword);

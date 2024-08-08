@@ -111,6 +111,10 @@ app.use("/search", searchRouter);
 const authRouter = require("./routes/auth");
 app.use("/auth", authRouter);
 
+app.get("/search", async (req, res) => {
+  const user = req.session.user;
+});
+
 app.use((req, res) => {
   res.status(404).render("404", { status: req.session.status });
 });

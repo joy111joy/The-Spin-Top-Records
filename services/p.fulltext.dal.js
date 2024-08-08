@@ -16,7 +16,7 @@ async function getFullText(keyword) {
         OR "artist" ILIKE $1
         OR "genre" ILIKE $1
         OR "label" ILIKE $1
-        OR "description" ILIKE $1
+        OR CAST("ReleaseYear" AS TEXT) ILIKE $1
     `;
     const values = [`%${keyword}%`];
     const result = await pool.query(query, values);

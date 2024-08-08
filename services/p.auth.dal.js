@@ -103,6 +103,11 @@ async function searchRecords(query) {
   }
 }
 
+router.get('/search', async (req, res) => {
+  req.session.user = user;
+  return;
+});
+
 module.exports = {
   getLogins,
   getLoginByUsername,
